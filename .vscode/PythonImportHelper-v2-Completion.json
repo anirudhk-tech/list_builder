@@ -1,0 +1,256 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
+        "isExtraImport": true,
+        "detail": "app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "IndieHackersLead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
+        "isExtraImport": true,
+        "detail": "app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_indiehackers_rss",
+        "importPath": "app.scrapers.spiders.indiehackers",
+        "description": "app.scrapers.spiders.indiehackers",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers",
+        "documentation": {}
+    },
+    {
+        "label": "run_in_threadpool",
+        "importPath": "starlette.concurrency",
+        "description": "starlette.concurrency",
+        "isExtraImport": true,
+        "detail": "starlette.concurrency",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "HttpUrl",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "feedparser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "feedparser",
+        "description": "feedparser",
+        "detail": "feedparser",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "app.api.v1.endpoints.health",
+        "description": "app.api.v1.endpoints.health",
+        "isExtraImport": true,
+        "detail": "app.api.v1.endpoints.health",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "app.api.v1.endpoints.leads",
+        "description": "app.api.v1.endpoints.leads",
+        "isExtraImport": true,
+        "detail": "app.api.v1.endpoints.leads",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "client.node_modules.flatted.python.flatted",
+        "description": "client.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "client.node_modules.flatted.python.flatted",
+        "description": "client.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "client.node_modules.flatted.python.flatted",
+        "description": "client.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "client.node_modules.flatted.python.flatted",
+        "description": "client.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "client.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.app.api.v1.endpoints.health",
+        "description": "server.app.api.v1.endpoints.health",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/health\", tags=[\"Health\"])\nasync def health_check():\n    \"\"\"\n    Health check endpoint to verify if the API is running.\n    Returns a simple JSON response indicating the status of the API.\n    \"\"\"\n    return {\"status\": \"ok\"}",
+        "detail": "server.app.api.v1.endpoints.health",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "server.app.api.v1.endpoints.leads",
+        "description": "server.app.api.v1.endpoints.leads",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/leads\", response_model=List[Lead], tags=[\"Leads\"])\nasync def get_leads(\n    type: Optional[str] = Query(None, description=\"Filter by lead type\"),\n    limit: int = Query(30, ge=1, le=100),\n):\n    \"\"\"\n    Retrieve a list of leads with optional filtering by type and pagination.\n    - **type**: Optional filter to get leads of a specific type.\n    - **limit**: Number of leads to return (default is 30, max is 100).",
+        "detail": "server.app.api.v1.endpoints.leads",
+        "documentation": {}
+    },
+    {
+        "label": "Lead",
+        "kind": 6,
+        "importPath": "server.app.models.lead",
+        "description": "server.app.models.lead",
+        "peekOfCode": "class Lead(BaseModel):\n    id: str\n    name: str\n    profile_url: HttpUrl\n    title: Optional[str]\n    source: Optional[str]\n    scraped_at: datetime\nclass IndieHackersLead(BaseModel):\n    id: str\n    name: str",
+        "detail": "server.app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "IndieHackersLead",
+        "kind": 6,
+        "importPath": "server.app.models.lead",
+        "description": "server.app.models.lead",
+        "peekOfCode": "class IndieHackersLead(BaseModel):\n    id: str\n    name: str\n    profile_url: HttpUrl\n    title: Optional[str]\n    source: Optional[str]\n    scraped_at: datetime",
+        "detail": "server.app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_indiehackers_rss",
+        "kind": 2,
+        "importPath": "server.app.scrapers.spiders.indiehackers",
+        "description": "server.app.scrapers.spiders.indiehackers",
+        "peekOfCode": "def scrape_indiehackers_rss():\n    \"\"\"\n    Fetches the Indie Hackers \"Launches\" RSS feed and yields Lead objects.\n    \"\"\"\n    FEED_URL = \"https://ihrss.io/newest\"\n    feed = feedparser.parse(FEED_URL)\n    leads = []\n    for entry in feed.entries:\n        leads.append(Lead (\n            id=str(uuid.uuid4()),",
+        "detail": "server.app.scrapers.spiders.indiehackers",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "server.app.main",
+        "description": "server.app.main",
+        "peekOfCode": "app = FastAPI(\n    title=\"Lead Scraper API\",\n    version=\"0.1.0\",\n    docs_url=\"/docs\",\n    openapi_url=\"/openapi.json\",\n)\napp.include_router(health_router, prefix=\"/api/v1\")\napp.include_router(leads_router, prefix=\"/api/v1\")",
+        "detail": "server.app.main",
+        "documentation": {}
+    }
+]

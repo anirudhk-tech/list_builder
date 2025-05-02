@@ -1,0 +1,5 @@
+### 2025-05-01 | 8:09 PM 🧭 Daily Log
+
+- **What I built:** Set up fastapi server and nextjs client. Scraping basic indiehackers.
+- **Why it matters:** With the first scraper up, we're moving faster than usual.
+- **Next:** Build simple scrapers for other websites and aggregate data.

@@ -1,8 +1,8 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# CLIENT
 
 # dependencies
-/node_modules
-/.pnp
+client/node_modules
+client/.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -11,14 +11,14 @@
 !.yarn/versions
 
 # testing
-/coverage
+client/coverage
 
 # next.js
-/.next/
-/out/
+client/.next/
+client/out/
 
 # production
-/build
+client/build
 
 # misc
 .DS_Store
@@ -31,11 +31,78 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+client/.env*
 
 # vercel
-.vercel
+client/.vercel
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+client/next-env.d.ts
+
+
+# SERVER
+
+# =========================
+# FastAPI Server (Python)
+# =========================
+
+# Byte-compiled / optimized / DLL files
+server/__pycache__/
+server/**/*.py[cod]
+server/*$py.class
+
+# C extensions
+server/**/*.so
+
+# Distribution / packaging
+server/build/
+server/dist/
+server/downloads/
+server/*.egg-info/
+server/*.egg
+server/wheels/
+
+# Installer logs
+server/pip-log.txt
+server/pip-delete-this-directory.txt
+
+# Virtual environments
+server/.venv/
+server/venv/
+server/env/
+server/ENV/
+server/env.bak/
+server/venv.bak/
+
+# dotenv
+server/.env
+.env
+
+# Database files
+server/*.db
+server/*.sqlite3
+server/leads.duckdb
+
+# Playwright browser cache
+server/.cache-playwright/
+server/playwright/
+
+# Logs & reports
+server/logs/
+server/*.log
+server/.coverage
+server/htmlcov/
+server/coverage.xml
+server/.pytest_cache/
+server/.mypy_cache/
+server/.hypothesis/
+
+
+# =========================
+# Editor / OS
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
