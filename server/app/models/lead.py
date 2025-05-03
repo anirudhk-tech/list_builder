@@ -2,18 +2,42 @@ from pydantic import BaseModel, HttpUrl
 from datetime import datetime
 from typing import Optional
 
+from pydantic import BaseModel, HttpUrl
+from datetime import datetime
+from typing import List, Optional, Dict, Any
+
+
+class ContactInfo(BaseModel):
+    method: str                # e.g. "email", "twitter", "linkedin"
+    value: str                 # e.g. "user@example.com", "@handle"
+    verified: bool = False     # whether we’re confident it’s correct
+
+
+class EngagementMetrics(BaseModel):
+    followers: Optional[int]
+    public_repos: Optional[int]      # for GitHub
+    recent_posts: Optional[int]      # posts in last 30 days
+    last_active: Optional[datetime]  # last timestamp we saw activity
+
+
 class Lead(BaseModel):
     id: str
-    name: str
-    profile_url: HttpUrl
-    title: Optional[str]
-    source: Optional[str]
+    name: Optional[str] = None         # e.g. "John Doe"
+    profile_url: Optional[HttpUrl] = None
+    title: Optional[str] = None           # e.g. "Full-Stack Engineer"
+    bio: Optional[str] = None
+    location: Optional[str] = None
+    source: str            # “indiehackers”, “github”, etc.
+    tags: List[str] = []             # e.g. ["react", "nodejs", "climate"]
+    skills: List[str] = []           # parsed skills
+    contacts: List[ContactInfo] = []
+    engagement: Optional[EngagementMetrics] = EngagementMetrics(
+        followers=None,
+        public_repos=None,
+        recent_posts=None,
+        last_active=None
+    )
     scraped_at: datetime
-    
-class IndieHackersLead(BaseModel):
-    id: str
-    name: str
-    profile_url: HttpUrl
-    title: Optional[str]
-    source: Optional[str]
-    scraped_at: datetime
+    match_score: Optional[float] = None    # computed by your ranking agent
+    embeddings: Optional[List[float]] = [] # for semantic similarity
+    raw: Optional[Dict[str, Any]]    # dump of the original scraped JSON
