@@ -1,8 +1,8 @@
-from fastapi import APIRouter, Query
+from fastapi import APIRouter, Query # type: ignore[import]
 from typing import List, Optional
 from app.models.lead import Lead
-from app.scrapers.spiders.indiehackers import scrape_indiehackers_rss
-from starlette.concurrency import run_in_threadpool
+from app.scrapers.spiders.base import scrape
+from starlette.concurrency import run_in_threadpool # type: ignore[import]
 
 router = APIRouter()
 
@@ -16,6 +16,6 @@ async def get_leads(
     - **type**: Optional filter to get leads of a specific type.
     - **limit**: Number of leads to return (default is 30, max is 100).
     """
-    leads = await run_in_threadpool(scrape_indiehackers_rss)
+    leads = await run_in_threadpool(scrape, limit=limit)
     
     return leads[:limit]

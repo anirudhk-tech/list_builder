@@ -106,19 +106,19 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "app.models.lead",
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
         "isExtraImport": true,
-        "detail": "typing",
+        "detail": "app.models.lead",
         "documentation": {}
     },
     {
@@ -138,11 +138,11 @@
         "documentation": {}
     },
     {
-        "label": "scrape_indiehackers_rss",
-        "importPath": "app.scrapers.spiders.indiehackers",
-        "description": "app.scrapers.spiders.indiehackers",
+        "label": "scrape",
+        "importPath": "app.scrapers.spiders.base",
+        "description": "app.scrapers.spiders.base",
         "isExtraImport": true,
-        "detail": "app.scrapers.spiders.indiehackers",
+        "detail": "app.scrapers.spiders.base",
         "documentation": {}
     },
     {
@@ -170,6 +170,14 @@
         "documentation": {}
     },
     {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -211,15 +219,6 @@
         "documentation": {}
     },
     {
-        "label": "feedparser",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "feedparser",
-        "description": "feedparser",
-        "detail": "feedparser",
-        "documentation": {}
-    },
-    {
         "label": "uuid",
         "kind": 6,
         "isExtraImport": true,
@@ -229,37 +228,19 @@
         "documentation": {}
     },
     {
-        "label": "requests",
-        "kind": 6,
+        "label": "get_logger",
+        "importPath": "app.logging_config",
+        "description": "app.logging_config",
         "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
+        "detail": "app.logging_config",
         "documentation": {}
     },
     {
-        "label": "BeautifulSoup",
-        "importPath": "bs4",
-        "description": "bs4",
+        "label": "get_logger",
+        "importPath": "app.logging_config",
+        "description": "app.logging_config",
         "isExtraImport": true,
-        "detail": "bs4",
-        "documentation": {}
-    },
-    {
-        "label": "urllib.parse",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "detail": "urllib.parse",
-        "documentation": {}
-    },
-    {
-        "label": "AlgoliaClient",
-        "importPath": "app.services.algolia_client",
-        "description": "app.services.algolia_client",
-        "isExtraImport": true,
-        "detail": "app.services.algolia_client",
+        "detail": "app.logging_config",
         "documentation": {}
     },
     {
@@ -276,6 +257,126 @@
         "description": "app.logging_config",
         "isExtraImport": true,
         "detail": "app.logging_config",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.robotparser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.robotparser",
+        "description": "urllib.robotparser",
+        "detail": "urllib.robotparser",
+        "documentation": {}
+    },
+    {
+        "label": "xml.etree.ElementTree",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "xml.etree.ElementTree",
+        "description": "xml.etree.ElementTree",
+        "detail": "xml.etree.ElementTree",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_author_page",
+        "importPath": "app.scrapers.spiders.indiehackers.fetch",
+        "description": "app.scrapers.spiders.indiehackers.fetch",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_sitemap_urls",
+        "importPath": "app.scrapers.spiders.indiehackers.fetch",
+        "description": "app.scrapers.spiders.indiehackers.fetch",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "extract_author_urls",
+        "importPath": "app.scrapers.spiders.indiehackers.utils",
+        "description": "app.scrapers.spiders.indiehackers.utils",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.utils",
+        "documentation": {}
+    },
+    {
+        "label": "urllib.parse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "unquote",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
+        "label": "bs4",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bs4",
+        "description": "bs4",
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_indiehackers",
+        "importPath": "app.scrapers.spiders.indiehackers.scrape",
+        "description": "app.scrapers.spiders.indiehackers.scrape",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.scrape",
         "documentation": {}
     },
     {
@@ -371,7 +472,7 @@
         "kind": 6,
         "importPath": "server.app.models.lead",
         "description": "server.app.models.lead",
-        "peekOfCode": "class ContactInfo(BaseModel):\n    method: str                # e.g. \"email\", \"twitter\", \"linkedin\"\n    value: str                 # e.g. \"user@example.com\", \"@handle\"\n    verified: bool = False     # whether we’re confident it’s correct\nclass EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]      # for GitHub\n    recent_posts: Optional[int]      # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):",
+        "peekOfCode": "class ContactInfo(BaseModel):\n    method: str                # e.g. \"email\", \"twitter\", \"linkedin\"\n    value: str                 # e.g. \"user@example.com\", \"@handle\"\nclass EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]      # for GitHub\n    recent_posts: Optional[int]      # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))",
         "detail": "server.app.models.lead",
         "documentation": {}
     },
@@ -380,7 +481,7 @@
         "kind": 6,
         "importPath": "server.app.models.lead",
         "description": "server.app.models.lead",
-        "peekOfCode": "class EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]      # for GitHub\n    recent_posts: Optional[int]      # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str\n    name: Optional[str] = None         # e.g. \"John Doe\"\n    profile_url: Optional[HttpUrl] = None\n    title: Optional[str] = None           # e.g. \"Full-Stack Engineer\"",
+        "peekOfCode": "class EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]      # for GitHub\n    recent_posts: Optional[int]      # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))\n    name: Optional[str] = None         # e.g. \"John Doe\"\n    username: Optional[str] = None     # e.g. \"johndoe\"\n    profile_url: Optional[HttpUrl] = None",
         "detail": "server.app.models.lead",
         "documentation": {}
     },
@@ -389,89 +490,107 @@
         "kind": 6,
         "importPath": "server.app.models.lead",
         "description": "server.app.models.lead",
-        "peekOfCode": "class Lead(BaseModel):\n    id: str\n    name: Optional[str] = None         # e.g. \"John Doe\"\n    profile_url: Optional[HttpUrl] = None\n    title: Optional[str] = None           # e.g. \"Full-Stack Engineer\"\n    bio: Optional[str] = None\n    location: Optional[str] = None\n    source: str            # “indiehackers”, “github”, etc.\n    tags: List[str] = []             # e.g. [\"react\", \"nodejs\", \"climate\"]\n    skills: List[str] = []           # parsed skills",
+        "peekOfCode": "class Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))\n    name: Optional[str] = None         # e.g. \"John Doe\"\n    username: Optional[str] = None     # e.g. \"johndoe\"\n    profile_url: Optional[HttpUrl] = None\n    title: Optional[str] = None           # e.g. \"Full-Stack Engineer\"\n    bio: Optional[str] = None\n    website: Optional[HttpUrl] = None     # e.g. \"https://example.com\"\n    location: Optional[str] = None\n    source: str            # “indiehackers”, “github”, etc.",
         "detail": "server.app.models.lead",
         "documentation": {}
     },
     {
-        "label": "get_algolia_client",
+        "label": "fetch_sitemap_urls",
         "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "def get_algolia_client(meta):\n    \"\"\"\n    Lazy load Algolia client with application ID and API key.\n    \"\"\"\n    global ALGOLIA_APP_ID, ALGOLIA_API_KEY, client\n    if not ALGOLIA_APP_ID:\n        ALGOLIA_APP_ID = meta[\"algolia\"][\"applicationId\"]\n    if not ALGOLIA_API_KEY:\n        ALGOLIA_API_KEY = meta[\"algolia\"][\"searchOnlyApiKey\"]\n    if not client and ALGOLIA_APP_ID and ALGOLIA_API_KEY:",
-        "detail": "server.app.scrapers.spiders.indiehackers",
+        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
+        "description": "server.app.scrapers.spiders.indiehackers.fetch",
+        "peekOfCode": "def fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML\n    ns = {\"ns\": \"http://www.sitemaps.org/schemas/sitemap/0.9\"} # Step 3: Define the namespace\n    return [u.find(\"ns:loc\", ns).text for u in root.findall(\"ns:url\", ns)] # Step 4: Extract URLs\ndef fetch_author_page(author: str) -> typing.Union[Lead, None]:\n    ALGOLIA_APP_ID  = \"N86T1R3OWZ\"\n    ALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"",
+        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
     {
-        "label": "scrape_indiehackers_meta",
+        "label": "fetch_author_page",
         "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "def scrape_indiehackers_meta(company_url: str):\n    \"\"\"\n    Returns meta content for a given Indie Hackers company URL.\n    \"\"\"\n    if not company_url: return None # Return None if no URL is provided\n    response = requests.get(company_url, timeout=10) # Step 1: Fetch the page\n    response.raise_for_status() # Raise an error for bad status codes\n    doc = BeautifulSoup(response.text, \"html.parser\") # Step 2: Parse the HTML\n    meta = doc.find(\"meta\", { \"name\": \"indie-hackers/config/environment\" }) # Step 3: Find the meta tag\n    if not meta or not meta.get(\"content\"): # Check if the meta tag exists and has content",
-        "detail": "server.app.scrapers.spiders.indiehackers",
+        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
+        "description": "server.app.scrapers.spiders.indiehackers.fetch",
+        "peekOfCode": "def fetch_author_page(author: str) -> typing.Union[Lead, None]:\n    ALGOLIA_APP_ID  = \"N86T1R3OWZ\"\n    ALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"\n    INDEX           = \"users\"\n    url = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\n    headers = {\n        \"X-Algolia-Application-Id\": ALGOLIA_APP_ID,\n        \"X-Algolia-API-Key\":       ALGOLIA_API_KEY,\n        \"Content-Type\":            \"application/json\"\n    }",
+        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
     {
-        "label": "scrape_indiehackers_deep",
-        "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "def scrape_indiehackers_deep(company_url: str, entry: dict = None):\n    \"\"\"\n    Returns additional data for a given Indie Hackers company URL\n    \"\"\"\n    meta = scrape_indiehackers_meta(company_url) # Step 1: Fetch meta content\n    if not meta: return None # Return None if no meta content is found\n    client = get_algolia_client(meta) # Step 2: Initialize Algolia client\n    author = entry.get(\"author\", None) # Step 3: Get author from entry\n    logger.debug(\"Entry keys for %s: %s\", entry.get(\"link\"), list(entry.keys()))\n    if not entry or not author or not client:",
-        "detail": "server.app.scrapers.spiders.indiehackers",
-        "documentation": {}
-    },
-    {
-        "label": "scrape_indiehackers_rss",
-        "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "def scrape_indiehackers_rss():\n    \"\"\"\n    Fetches the Indie Hackers RSS feed and yields Lead objects.\n    \"\"\"\n    NEWEST_FEED_URL = \"https://ihrss.io/newest\"\n    FEAT_FEED_URL = \"https://ihrss.io/featured\"\n    ORG_FEED_URL = \"https://ihrss.io/organic\"\n    newest_feed = feedparser.parse(NEWEST_FEED_URL)\n    feat_feed = feedparser.parse(FEAT_FEED_URL)\n    org_feed = feedparser.parse(ORG_FEED_URL)",
-        "detail": "server.app.scrapers.spiders.indiehackers",
-        "documentation": {}
-    },
-    {
-        "label": "ALGOLIA_APP_ID",
+        "label": "ROBOTS_URL",
         "kind": 5,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "ALGOLIA_APP_ID = None\nALGOLIA_API_KEY = None\nclient = None\nlogger = get_logger(__name__)\ndef get_algolia_client(meta):\n    \"\"\"\n    Lazy load Algolia client with application ID and API key.\n    \"\"\"\n    global ALGOLIA_APP_ID, ALGOLIA_API_KEY, client\n    if not ALGOLIA_APP_ID:",
-        "detail": "server.app.scrapers.spiders.indiehackers",
+        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
+        "description": "server.app.scrapers.spiders.indiehackers.fetch",
+        "peekOfCode": "ROBOTS_URL = \"https://indiehackers.com/robots.txt\"\nrp = urllib.robotparser.RobotFileParser()\nrp.set_url(ROBOTS_URL)\nrp.read()\nlogger = get_logger(__name__)\ndef fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML",
+        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
     {
-        "label": "ALGOLIA_API_KEY",
+        "label": "rp",
         "kind": 5,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "ALGOLIA_API_KEY = None\nclient = None\nlogger = get_logger(__name__)\ndef get_algolia_client(meta):\n    \"\"\"\n    Lazy load Algolia client with application ID and API key.\n    \"\"\"\n    global ALGOLIA_APP_ID, ALGOLIA_API_KEY, client\n    if not ALGOLIA_APP_ID:\n        ALGOLIA_APP_ID = meta[\"algolia\"][\"applicationId\"]",
-        "detail": "server.app.scrapers.spiders.indiehackers",
-        "documentation": {}
-    },
-    {
-        "label": "client",
-        "kind": 5,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "client = None\nlogger = get_logger(__name__)\ndef get_algolia_client(meta):\n    \"\"\"\n    Lazy load Algolia client with application ID and API key.\n    \"\"\"\n    global ALGOLIA_APP_ID, ALGOLIA_API_KEY, client\n    if not ALGOLIA_APP_ID:\n        ALGOLIA_APP_ID = meta[\"algolia\"][\"applicationId\"]\n    if not ALGOLIA_API_KEY:",
-        "detail": "server.app.scrapers.spiders.indiehackers",
+        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
+        "description": "server.app.scrapers.spiders.indiehackers.fetch",
+        "peekOfCode": "rp = urllib.robotparser.RobotFileParser()\nrp.set_url(ROBOTS_URL)\nrp.read()\nlogger = get_logger(__name__)\ndef fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML\n    ns = {\"ns\": \"http://www.sitemaps.org/schemas/sitemap/0.9\"} # Step 3: Define the namespace",
+        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
     {
         "label": "logger",
         "kind": 5,
-        "importPath": "server.app.scrapers.spiders.indiehackers",
-        "description": "server.app.scrapers.spiders.indiehackers",
-        "peekOfCode": "logger = get_logger(__name__)\ndef get_algolia_client(meta):\n    \"\"\"\n    Lazy load Algolia client with application ID and API key.\n    \"\"\"\n    global ALGOLIA_APP_ID, ALGOLIA_API_KEY, client\n    if not ALGOLIA_APP_ID:\n        ALGOLIA_APP_ID = meta[\"algolia\"][\"applicationId\"]\n    if not ALGOLIA_API_KEY:\n        ALGOLIA_API_KEY = meta[\"algolia\"][\"searchOnlyApiKey\"]",
-        "detail": "server.app.scrapers.spiders.indiehackers",
+        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
+        "description": "server.app.scrapers.spiders.indiehackers.fetch",
+        "peekOfCode": "logger = get_logger(__name__)\ndef fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML\n    ns = {\"ns\": \"http://www.sitemaps.org/schemas/sitemap/0.9\"} # Step 3: Define the namespace\n    return [u.find(\"ns:loc\", ns).text for u in root.findall(\"ns:url\", ns)] # Step 4: Extract URLs\ndef fetch_author_page(author: str) -> typing.Union[Lead, None]:\n    ALGOLIA_APP_ID  = \"N86T1R3OWZ\"",
+        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
     {
-        "label": "AlgoliaClient",
-        "kind": 6,
-        "importPath": "server.app.services.algolia_client",
-        "description": "server.app.services.algolia_client",
-        "peekOfCode": "class AlgoliaClient:\n    def __init__(self, app_id: str, api_key: str):\n        self.app_id = app_id\n        self.api_key = api_key\n        self.base_url = f\"https://{app_id}-dsn.algolia.net/1/indexes/\"\n        self.headers = {\n            \"X-Algolia-API-Key\": api_key,\n            \"X-Algolia-Application-Id\": app_id,\n            \"Content-Type\": \"application/json\"\n        }",
-        "detail": "server.app.services.algolia_client",
+        "label": "scrape_indiehackers",
+        "kind": 2,
+        "importPath": "server.app.scrapers.spiders.indiehackers.scrape",
+        "description": "server.app.scrapers.spiders.indiehackers.scrape",
+        "peekOfCode": "def scrape_indiehackers(limit: int) -> list[Lead]:\n    \"\"\"Main entry: scrape all author leads from Indie Hackers sitemaps.\"\"\"\n    sitemap_url = \"https://storage.googleapis.com/indie-hackers.appspot.com/sitemaps/ih-sitemap-5.xml\" # Only #5 has authors\n    leads: list[Lead] = []\n    lead_count = 0\n    page_urls = fetch_sitemap_urls(sitemap_url) # Step 1: Fetch page URLs\n    authors = extract_author_urls(page_urls) # Step 2: Extract author URLs in pages\n    logger.info(f\"Found {len(authors)} author URLs in {sitemap_url}\")\n    for author in authors: # Step 3: Parse each author page\n        if lead_count >= limit:",
+        "detail": "server.app.scrapers.spiders.indiehackers.scrape",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.scrape",
+        "description": "server.app.scrapers.spiders.indiehackers.scrape",
+        "peekOfCode": "logger = get_logger(__name__)\ndef scrape_indiehackers(limit: int) -> list[Lead]:\n    \"\"\"Main entry: scrape all author leads from Indie Hackers sitemaps.\"\"\"\n    sitemap_url = \"https://storage.googleapis.com/indie-hackers.appspot.com/sitemaps/ih-sitemap-5.xml\" # Only #5 has authors\n    leads: list[Lead] = []\n    lead_count = 0\n    page_urls = fetch_sitemap_urls(sitemap_url) # Step 1: Fetch page URLs\n    authors = extract_author_urls(page_urls) # Step 2: Extract author URLs in pages\n    logger.info(f\"Found {len(authors)} author URLs in {sitemap_url}\")\n    for author in authors: # Step 3: Parse each author page",
+        "detail": "server.app.scrapers.spiders.indiehackers.scrape",
+        "documentation": {}
+    },
+    {
+        "label": "extract_author_urls",
+        "kind": 2,
+        "importPath": "server.app.scrapers.spiders.indiehackers.utils",
+        "description": "server.app.scrapers.spiders.indiehackers.utils",
+        "peekOfCode": "def extract_author_urls(urls: list[str]) -> list[dict[str, str]]:\n    \"\"\"Filter URLs -> slugs to only include Indie Hackers author profile pages.\"\"\"\n    authors = []\n    NON_USER = {\"post\", \"forum\", \"tag\", \"search\", \"pricing\", \"about\", \"terms\", \"privacy\", \"stories\", \"jobs\", \"events\", \"products\", \"podcast\", \"community\", \"resources\", \"help\", \"contact\", \"login\", \"signup\", \"ideas\",\"newest\",\"starting-up\",\"trending\",\"popular\", \"ai-coding-tools\", }\n    logger.info(f\"Extracting author URLs from {len(urls)} URLs\")\n    for u in urls: # Step 2: Filter URLs\n        p = urlparse(u)\n        netloc = p.netloc.lower().split(\":\", 1)[0]\n        if netloc not in (\"indiehackers.com\", \"www.indiehackers.com\"):\n            continue",
+        "detail": "server.app.scrapers.spiders.indiehackers.utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_algolia",
+        "kind": 2,
+        "importPath": "server.app.scrapers.spiders.indiehackers.utils",
+        "description": "server.app.scrapers.spiders.indiehackers.utils",
+        "peekOfCode": "def get_algolia(): # Initially used to fetch Algolia credentials\n    html   = requests.get(\"https://www.indiehackers.com\").text       \n    soup   = bs4.BeautifulSoup(html, \"html.parser\")\n    meta   = soup.find(\"meta\", {\n                 \"name\": re.compile(r\"indie-hackers/config/environment\", re.I)\n             })\n    env    = json.loads(urllib.parse.unquote(meta[\"content\"]))\n    print(env[\"algolia\"][\"applicationId\"])        # N86T1R3OWZ\n    print(env[\"algolia\"][\"searchOnlyApiKey\"])     # 5140dac5e87…\n    print(env[\"algolia\"])              # This contains index names",
+        "detail": "server.app.scrapers.spiders.indiehackers.utils",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.utils",
+        "description": "server.app.scrapers.spiders.indiehackers.utils",
+        "peekOfCode": "logger = get_logger(__name__)\ndef extract_author_urls(urls: list[str]) -> list[dict[str, str]]:\n    \"\"\"Filter URLs -> slugs to only include Indie Hackers author profile pages.\"\"\"\n    authors = []\n    NON_USER = {\"post\", \"forum\", \"tag\", \"search\", \"pricing\", \"about\", \"terms\", \"privacy\", \"stories\", \"jobs\", \"events\", \"products\", \"podcast\", \"community\", \"resources\", \"help\", \"contact\", \"login\", \"signup\", \"ideas\",\"newest\",\"starting-up\",\"trending\",\"popular\", \"ai-coding-tools\", }\n    logger.info(f\"Extracting author URLs from {len(urls)} URLs\")\n    for u in urls: # Step 2: Filter URLs\n        p = urlparse(u)\n        netloc = p.netloc.lower().split(\":\", 1)[0]\n        if netloc not in (\"indiehackers.com\", \"www.indiehackers.com\"):",
+        "detail": "server.app.scrapers.spiders.indiehackers.utils",
+        "documentation": {}
+    },
+    {
+        "label": "scrape",
+        "kind": 2,
+        "importPath": "server.app.scrapers.spiders.base",
+        "description": "server.app.scrapers.spiders.base",
+        "peekOfCode": "def scrape(limit: int) -> list[Lead]:\n    \"\"\"\n    Scrapes for data across all spiders and returns a list of leads.\n    \"\"\"\n    leads = scrape_indiehackers(limit)\n    return leads",
+        "detail": "server.app.scrapers.spiders.base",
         "documentation": {}
     },
     {

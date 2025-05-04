@@ -1,17 +1,16 @@
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, Field
 from datetime import datetime
 from typing import Optional
 
 from pydantic import BaseModel, HttpUrl
 from datetime import datetime
 from typing import List, Optional, Dict, Any
+import uuid
 
 
 class ContactInfo(BaseModel):
     method: str                # e.g. "email", "twitter", "linkedin"
     value: str                 # e.g. "user@example.com", "@handle"
-    verified: bool = False     # whether we’re confident it’s correct
-
 
 class EngagementMetrics(BaseModel):
     followers: Optional[int]
@@ -21,11 +20,13 @@ class EngagementMetrics(BaseModel):
 
 
 class Lead(BaseModel):
-    id: str
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     name: Optional[str] = None         # e.g. "John Doe"
+    username: Optional[str] = None     # e.g. "johndoe"
     profile_url: Optional[HttpUrl] = None
     title: Optional[str] = None           # e.g. "Full-Stack Engineer"
     bio: Optional[str] = None
+    website: Optional[HttpUrl] = None     # e.g. "https://example.com"
     location: Optional[str] = None
     source: str            # “indiehackers”, “github”, etc.
     tags: List[str] = []             # e.g. ["react", "nodejs", "climate"]
