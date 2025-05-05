@@ -41,19 +41,107 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "HttpUrl",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "HttpUrl",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
+        "isExtraImport": true,
+        "detail": "app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
+        "isExtraImport": true,
+        "detail": "app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
+        "isExtraImport": true,
+        "detail": "app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "Lead",
+        "importPath": "app.models.lead",
+        "description": "app.models.lead",
+        "isExtraImport": true,
+        "detail": "app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "scrape",
+        "importPath": "app.scrapers.spiders.base",
+        "description": "app.scrapers.spiders.base",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.base",
+        "documentation": {}
+    },
+    {
+        "label": "run_in_threadpool",
+        "importPath": "starlette.concurrency",
+        "description": "starlette.concurrency",
+        "isExtraImport": true,
+        "detail": "starlette.concurrency",
+        "documentation": {}
+    },
+    {
         "label": "typing",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "typing",
         "description": "typing",
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
         "detail": "typing",
         "documentation": {}
     },
@@ -106,99 +194,10 @@
         "documentation": {}
     },
     {
-        "label": "Lead",
-        "importPath": "app.models.lead",
-        "description": "app.models.lead",
-        "isExtraImport": true,
-        "detail": "app.models.lead",
-        "documentation": {}
-    },
-    {
-        "label": "Lead",
-        "importPath": "app.models.lead",
-        "description": "app.models.lead",
-        "isExtraImport": true,
-        "detail": "app.models.lead",
-        "documentation": {}
-    },
-    {
-        "label": "Lead",
-        "importPath": "app.models.lead",
-        "description": "app.models.lead",
-        "isExtraImport": true,
-        "detail": "app.models.lead",
-        "documentation": {}
-    },
-    {
-        "label": "Lead",
-        "importPath": "app.models.lead",
-        "description": "app.models.lead",
-        "isExtraImport": true,
-        "detail": "app.models.lead",
-        "documentation": {}
-    },
-    {
-        "label": "scrape",
-        "importPath": "app.scrapers.spiders.base",
-        "description": "app.scrapers.spiders.base",
-        "isExtraImport": true,
-        "detail": "app.scrapers.spiders.base",
-        "documentation": {}
-    },
-    {
-        "label": "run_in_threadpool",
-        "importPath": "starlette.concurrency",
-        "description": "starlette.concurrency",
-        "isExtraImport": true,
-        "detail": "starlette.concurrency",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "HttpUrl",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "HttpUrl",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
         "label": "datetime",
-        "kind": 6,
-        "isExtraImport": true,
         "importPath": "datetime",
         "description": "datetime",
+        "isExtraImport": true,
         "detail": "datetime",
         "documentation": {}
     },
@@ -212,6 +211,14 @@
     },
     {
         "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -225,6 +232,23 @@
         "importPath": "uuid",
         "description": "uuid",
         "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPAdapter",
+        "importPath": "requests.adapters",
+        "description": "requests.adapters",
+        "isExtraImport": true,
+        "detail": "requests.adapters",
         "documentation": {}
     },
     {
@@ -260,30 +284,11 @@
         "documentation": {}
     },
     {
-        "label": "urllib.robotparser",
-        "kind": 6,
+        "label": "configure_root_logger",
+        "importPath": "app.logging_config",
+        "description": "app.logging_config",
         "isExtraImport": true,
-        "importPath": "urllib.robotparser",
-        "description": "urllib.robotparser",
-        "detail": "urllib.robotparser",
-        "documentation": {}
-    },
-    {
-        "label": "xml.etree.ElementTree",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "xml.etree.ElementTree",
-        "description": "xml.etree.ElementTree",
-        "detail": "xml.etree.ElementTree",
-        "documentation": {}
-    },
-    {
-        "label": "requests",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
+        "detail": "app.logging_config",
         "documentation": {}
     },
     {
@@ -305,7 +310,176 @@
         "documentation": {}
     },
     {
-        "label": "fetch_author_page",
+        "label": "urllib.robotparser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "urllib.robotparser",
+        "description": "urllib.robotparser",
+        "detail": "urllib.robotparser",
+        "documentation": {}
+    },
+    {
+        "label": "ROBOTS_URL",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HEADERS",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "URL",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "POLITE_PAUSE_RANGE",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HEADERS",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "URL",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_DEPTH",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "USERNAME_PREFIXES",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALGOLIA_API_KEY",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALGOLIA_APP_ID",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HEAVY_PAUSE_RANGE",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "SUPER_HEAVY_PAUSE_RANGE",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HEADERS",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "USER_AGENTS",
+        "importPath": "app.scrapers.spiders.indiehackers.config",
+        "description": "app.scrapers.spiders.indiehackers.config",
+        "isExtraImport": true,
+        "detail": "app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPError",
+        "importPath": "requests.exceptions",
+        "description": "requests.exceptions",
+        "isExtraImport": true,
+        "detail": "requests.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "Timeout",
+        "importPath": "requests.exceptions",
+        "description": "requests.exceptions",
+        "isExtraImport": true,
+        "detail": "requests.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPError",
+        "importPath": "requests.exceptions",
+        "description": "requests.exceptions",
+        "isExtraImport": true,
+        "detail": "requests.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ContactInfo",
+        "importPath": "server.app.models.lead",
+        "description": "server.app.models.lead",
+        "isExtraImport": true,
+        "detail": "server.app.models.lead",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_all_leads",
         "importPath": "app.scrapers.spiders.indiehackers.fetch",
         "description": "app.scrapers.spiders.indiehackers.fetch",
         "isExtraImport": true,
@@ -313,62 +487,27 @@
         "documentation": {}
     },
     {
-        "label": "fetch_sitemap_urls",
-        "importPath": "app.scrapers.spiders.indiehackers.fetch",
-        "description": "app.scrapers.spiders.indiehackers.fetch",
+        "label": "deque",
+        "importPath": "collections",
+        "description": "collections",
         "isExtraImport": true,
-        "detail": "app.scrapers.spiders.indiehackers.fetch",
+        "detail": "collections",
         "documentation": {}
     },
     {
-        "label": "extract_author_urls",
-        "importPath": "app.scrapers.spiders.indiehackers.utils",
-        "description": "app.scrapers.spiders.indiehackers.utils",
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "detail": "app.scrapers.spiders.indiehackers.utils",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
-        "label": "urllib.parse",
-        "kind": 6,
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
         "isExtraImport": true,
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "detail": "urllib.parse",
-        "documentation": {}
-    },
-    {
-        "label": "urlparse",
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "isExtraImport": true,
-        "detail": "urllib.parse",
-        "documentation": {}
-    },
-    {
-        "label": "unquote",
-        "importPath": "urllib.parse",
-        "description": "urllib.parse",
-        "isExtraImport": true,
-        "detail": "urllib.parse",
-        "documentation": {}
-    },
-    {
-        "label": "bs4",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "bs4",
-        "description": "bs4",
-        "detail": "bs4",
-        "documentation": {}
-    },
-    {
-        "label": "re",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -395,6 +534,14 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "RotatingFileHandler",
+        "importPath": "logging.handlers",
+        "description": "logging.handlers",
+        "isExtraImport": true,
+        "detail": "logging.handlers",
         "documentation": {}
     },
     {
@@ -450,11 +597,20 @@
         "documentation": {}
     },
     {
+        "label": "HealthStatus",
+        "kind": 6,
+        "importPath": "server.app.api.v1.endpoints.health",
+        "description": "server.app.api.v1.endpoints.health",
+        "peekOfCode": "class HealthStatus(BaseModel):\n    status: str\n@router.get(\"/health\", response_model=HealthStatus, tags=[\"Health\"])\nasync def health_check() -> HealthStatus:\n    \"\"\"\n    Health check endpoint to verify if the API is running.\n    Returns a simple JSON response indicating the status of the API.\n    \"\"\"\n    return HealthStatus(status=\"ok\")",
+        "detail": "server.app.api.v1.endpoints.health",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "kind": 5,
         "importPath": "server.app.api.v1.endpoints.health",
         "description": "server.app.api.v1.endpoints.health",
-        "peekOfCode": "router = APIRouter()\n@router.get(\"/health\", tags=[\"Health\"])\nasync def health_check():\n    \"\"\"\n    Health check endpoint to verify if the API is running.\n    Returns a simple JSON response indicating the status of the API.\n    \"\"\"\n    return {\"status\": \"ok\"}",
+        "peekOfCode": "router = APIRouter()\nclass HealthStatus(BaseModel):\n    status: str\n@router.get(\"/health\", response_model=HealthStatus, tags=[\"Health\"])\nasync def health_check() -> HealthStatus:\n    \"\"\"\n    Health check endpoint to verify if the API is running.\n    Returns a simple JSON response indicating the status of the API.\n    \"\"\"\n    return HealthStatus(status=\"ok\")",
         "detail": "server.app.api.v1.endpoints.health",
         "documentation": {}
     },
@@ -463,7 +619,7 @@
         "kind": 5,
         "importPath": "server.app.api.v1.endpoints.leads",
         "description": "server.app.api.v1.endpoints.leads",
-        "peekOfCode": "router = APIRouter()\n@router.get(\"/leads\", response_model=List[Lead], tags=[\"Leads\"])\nasync def get_leads(\n    type: Optional[str] = Query(None, description=\"Filter by lead type\"),\n    limit: int = Query(30, ge=1, le=100),\n):\n    \"\"\"\n    Retrieve a list of leads with optional filtering by type and pagination.\n    - **type**: Optional filter to get leads of a specific type.\n    - **limit**: Number of leads to return (default is 30, max is 100).",
+        "peekOfCode": "router = APIRouter()\n@router.get(\"/leads\", response_model=list[Lead], tags=[\"Leads\"])\nasync def get_leads(\n    limit: Optional[int] = Query(None, description=\"Number of leads to return\", ge=1),\n):\n    \"\"\"\n    Retrieve a list of leads with optional filtering by type and pagination.\n    - **type**: Optional filter to get leads of a specific type.\n    - **limit**: Number of leads to return (default is None).\n    \"\"\"",
         "detail": "server.app.api.v1.endpoints.leads",
         "documentation": {}
     },
@@ -472,7 +628,7 @@
         "kind": 6,
         "importPath": "server.app.models.lead",
         "description": "server.app.models.lead",
-        "peekOfCode": "class ContactInfo(BaseModel):\n    method: str                # e.g. \"email\", \"twitter\", \"linkedin\"\n    value: str                 # e.g. \"user@example.com\", \"@handle\"\nclass EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]      # for GitHub\n    recent_posts: Optional[int]      # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))",
+        "peekOfCode": "class ContactInfo(BaseModel):\n    method: str  # e.g. \"email\", \"twitter\", \"linkedin\"\n    value: str  # e.g. \"user@example.com\", \"@handle\"\nclass EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]  # for GitHub\n    recent_posts: Optional[int]  # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))",
         "detail": "server.app.models.lead",
         "documentation": {}
     },
@@ -481,7 +637,7 @@
         "kind": 6,
         "importPath": "server.app.models.lead",
         "description": "server.app.models.lead",
-        "peekOfCode": "class EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]      # for GitHub\n    recent_posts: Optional[int]      # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))\n    name: Optional[str] = None         # e.g. \"John Doe\"\n    username: Optional[str] = None     # e.g. \"johndoe\"\n    profile_url: Optional[HttpUrl] = None",
+        "peekOfCode": "class EngagementMetrics(BaseModel):\n    followers: Optional[int]\n    public_repos: Optional[int]  # for GitHub\n    recent_posts: Optional[int]  # posts in last 30 days\n    last_active: Optional[datetime]  # last timestamp we saw activity\nclass Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))\n    name: Optional[str] = None  # e.g. \"John Doe\"\n    username: Optional[str] = None  # e.g. \"johndoe\"\n    profile_url: Optional[HttpUrl] = None",
         "detail": "server.app.models.lead",
         "documentation": {}
     },
@@ -490,34 +646,142 @@
         "kind": 6,
         "importPath": "server.app.models.lead",
         "description": "server.app.models.lead",
-        "peekOfCode": "class Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))\n    name: Optional[str] = None         # e.g. \"John Doe\"\n    username: Optional[str] = None     # e.g. \"johndoe\"\n    profile_url: Optional[HttpUrl] = None\n    title: Optional[str] = None           # e.g. \"Full-Stack Engineer\"\n    bio: Optional[str] = None\n    website: Optional[HttpUrl] = None     # e.g. \"https://example.com\"\n    location: Optional[str] = None\n    source: str            # “indiehackers”, “github”, etc.",
+        "peekOfCode": "class Lead(BaseModel):\n    id: str = Field(default_factory=lambda: str(uuid.uuid4()))\n    name: Optional[str] = None  # e.g. \"John Doe\"\n    username: Optional[str] = None  # e.g. \"johndoe\"\n    profile_url: Optional[HttpUrl] = None\n    title: Optional[str] = None  # e.g. \"Full-Stack Engineer\"\n    bio: Optional[str] = None\n    website: Optional[HttpUrl] = None  # e.g. \"https://example.com\"\n    location: Optional[str] = None\n    source: str  # “indiehackers”, “github”, etc.",
         "detail": "server.app.models.lead",
-        "documentation": {}
-    },
-    {
-        "label": "fetch_sitemap_urls",
-        "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
-        "description": "server.app.scrapers.spiders.indiehackers.fetch",
-        "peekOfCode": "def fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML\n    ns = {\"ns\": \"http://www.sitemaps.org/schemas/sitemap/0.9\"} # Step 3: Define the namespace\n    return [u.find(\"ns:loc\", ns).text for u in root.findall(\"ns:url\", ns)] # Step 4: Extract URLs\ndef fetch_author_page(author: str) -> typing.Union[Lead, None]:\n    ALGOLIA_APP_ID  = \"N86T1R3OWZ\"\n    ALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"",
-        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
-        "documentation": {}
-    },
-    {
-        "label": "fetch_author_page",
-        "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
-        "description": "server.app.scrapers.spiders.indiehackers.fetch",
-        "peekOfCode": "def fetch_author_page(author: str) -> typing.Union[Lead, None]:\n    ALGOLIA_APP_ID  = \"N86T1R3OWZ\"\n    ALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"\n    INDEX           = \"users\"\n    url = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\n    headers = {\n        \"X-Algolia-Application-Id\": ALGOLIA_APP_ID,\n        \"X-Algolia-API-Key\":       ALGOLIA_API_KEY,\n        \"Content-Type\":            \"application/json\"\n    }",
-        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
     {
         "label": "ROBOTS_URL",
         "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "ROBOTS_URL = \"https://indiehackers.com/robots.txt\"\nALGOLIA_APP_ID = \"N86T1R3OWZ\"\nALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"\nINDEX = \"users\"\nURL = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\nMAX_DEPTH = 10\nUSERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALGOLIA_APP_ID",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "ALGOLIA_APP_ID = \"N86T1R3OWZ\"\nALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"\nINDEX = \"users\"\nURL = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\nMAX_DEPTH = 10\nUSERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "ALGOLIA_API_KEY",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "ALGOLIA_API_KEY = \"5140dac5e87f47346abbda1a34ee70c3\"\nINDEX = \"users\"\nURL = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\nMAX_DEPTH = 10\nUSERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "INDEX",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "INDEX = \"users\"\nURL = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\nMAX_DEPTH = 10\nUSERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "URL",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "URL = f\"https://{ALGOLIA_APP_ID}-dsn.algolia.net/1/indexes/{INDEX}/query\"\nMAX_DEPTH = 10\nUSERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_DEPTH",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "MAX_DEPTH = 10\nUSERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [\n    # Desktop – Chrome on Windows 10",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "USERNAME_PREFIXES",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "USERNAME_PREFIXES = list(\"abcdefghijklmnopqrstuvwxyz0123456789_-.\")\nSESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [\n    # Desktop – Chrome on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "SESSION",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "SESSION = requests.Session()\nADAPTER: HTTPAdapter = HTTPAdapter(max_retries=3)\nSESSION.mount(\"https://\", ADAPTER)\nPOLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [\n    # Desktop – Chrome on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.5735.199 Safari/537.36\",",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "POLITE_PAUSE_RANGE",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "POLITE_PAUSE_RANGE = (0.5, 1.5)  # seconds\nHEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [\n    # Desktop – Chrome on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.5735.199 Safari/537.36\",\n    # Desktop – Firefox on Windows 11\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:116.0) Gecko/20100101 Firefox/116.0\",\n    # Desktop – Edge on Windows 10",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HEAVY_PAUSE_RANGE",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "HEAVY_PAUSE_RANGE = (8, 15)  # seconds\nSUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [\n    # Desktop – Chrome on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.5735.199 Safari/537.36\",\n    # Desktop – Firefox on Windows 11\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:116.0) Gecko/20100101 Firefox/116.0\",\n    # Desktop – Edge on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "SUPER_HEAVY_PAUSE_RANGE",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "SUPER_HEAVY_PAUSE_RANGE = (30, 60)  # seconds\nUSER_AGENTS = [\n    # Desktop – Chrome on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.5735.199 Safari/537.36\",\n    # Desktop – Firefox on Windows 11\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:116.0) Gecko/20100101 Firefox/116.0\",\n    # Desktop – Edge on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.67\",",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "USER_AGENTS",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "USER_AGENTS = [\n    # Desktop – Chrome on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.5735.199 Safari/537.36\",\n    # Desktop – Firefox on Windows 11\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:116.0) Gecko/20100101 Firefox/116.0\",\n    # Desktop – Edge on Windows 10\n    \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)\"\n    \" Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.67\",\n    # Desktop – Safari on macOS Ventura",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "HEADERS",
+        "kind": 5,
+        "importPath": "server.app.scrapers.spiders.indiehackers.config",
+        "description": "server.app.scrapers.spiders.indiehackers.config",
+        "peekOfCode": "HEADERS = {\n    \"X-Algolia-Application-Id\": ALGOLIA_APP_ID,\n    \"X-Algolia-API-Key\": ALGOLIA_API_KEY,\n    \"Content-Type\": \"application/json\",\n}",
+        "detail": "server.app.scrapers.spiders.indiehackers.config",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_leads_for_prefix",
+        "kind": 2,
         "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
         "description": "server.app.scrapers.spiders.indiehackers.fetch",
-        "peekOfCode": "ROBOTS_URL = \"https://indiehackers.com/robots.txt\"\nrp = urllib.robotparser.RobotFileParser()\nrp.set_url(ROBOTS_URL)\nrp.read()\nlogger = get_logger(__name__)\ndef fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML",
+        "peekOfCode": "def fetch_leads_for_prefix(prefix: str, seen: set[str]) -> list[Lead]:\n    prefix_leads: list[Lead] = []\n    payload: dict[str, typing.Any] = {\n        \"query\": prefix,\n        \"hitsPerPage\": 1000,\n        \"restrictSearchableAttributes\": [\"username\"],\n        \"queryType\": \"prefixAll\",\n        \"typoTolerance\": False,\n    }\n    for backoff in (",
+        "detail": "server.app.scrapers.spiders.indiehackers.fetch",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_all_leads",
+        "kind": 2,
+        "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
+        "description": "server.app.scrapers.spiders.indiehackers.fetch",
+        "peekOfCode": "def fetch_all_leads(limit: typing.Optional[int] = None) -> list[Lead]:\n    \"\"\"Fetch all leads from Indie Hackers.\"\"\"\n    leads: list[Lead] = []\n    seen: set[str] = set()\n    remaining = limit if limit else None\n    with open(\"ih_buckets.json\", \"r\") as f:\n        subdivisions = json.load(f)\n    for idx, prefix in enumerate(\n        subdivisions, 1\n    ):  # Step 1: Iterate through each prefix of precomputed subdivisions",
         "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
@@ -526,7 +790,7 @@
         "kind": 5,
         "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
         "description": "server.app.scrapers.spiders.indiehackers.fetch",
-        "peekOfCode": "rp = urllib.robotparser.RobotFileParser()\nrp.set_url(ROBOTS_URL)\nrp.read()\nlogger = get_logger(__name__)\ndef fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML\n    ns = {\"ns\": \"http://www.sitemaps.org/schemas/sitemap/0.9\"} # Step 3: Define the namespace",
+        "peekOfCode": "rp = urllib.robotparser.RobotFileParser()\nrp.set_url(ROBOTS_URL)\nrp.read()\nlogger = get_logger(__name__)\ndef fetch_leads_for_prefix(prefix: str, seen: set[str]) -> list[Lead]:\n    prefix_leads: list[Lead] = []\n    payload: dict[str, typing.Any] = {\n        \"query\": prefix,\n        \"hitsPerPage\": 1000,\n        \"restrictSearchableAttributes\": [\"username\"],",
         "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
@@ -535,7 +799,7 @@
         "kind": 5,
         "importPath": "server.app.scrapers.spiders.indiehackers.fetch",
         "description": "server.app.scrapers.spiders.indiehackers.fetch",
-        "peekOfCode": "logger = get_logger(__name__)\ndef fetch_sitemap_urls(sitemap_url: str) -> list[str]:\n    \"\"\"Fetch a sitemap file and return list of page URLs.\"\"\"\n    response = requests.get(sitemap_url) # Step 1: Fetch the sitemap\n    response.raise_for_status()\n    root = ET.fromstring(response.content) # Step 2: Parse the XML\n    ns = {\"ns\": \"http://www.sitemaps.org/schemas/sitemap/0.9\"} # Step 3: Define the namespace\n    return [u.find(\"ns:loc\", ns).text for u in root.findall(\"ns:url\", ns)] # Step 4: Extract URLs\ndef fetch_author_page(author: str) -> typing.Union[Lead, None]:\n    ALGOLIA_APP_ID  = \"N86T1R3OWZ\"",
+        "peekOfCode": "logger = get_logger(__name__)\ndef fetch_leads_for_prefix(prefix: str, seen: set[str]) -> list[Lead]:\n    prefix_leads: list[Lead] = []\n    payload: dict[str, typing.Any] = {\n        \"query\": prefix,\n        \"hitsPerPage\": 1000,\n        \"restrictSearchableAttributes\": [\"username\"],\n        \"queryType\": \"prefixAll\",\n        \"typoTolerance\": False,\n    }",
         "detail": "server.app.scrapers.spiders.indiehackers.fetch",
         "documentation": {}
     },
@@ -544,7 +808,7 @@
         "kind": 2,
         "importPath": "server.app.scrapers.spiders.indiehackers.scrape",
         "description": "server.app.scrapers.spiders.indiehackers.scrape",
-        "peekOfCode": "def scrape_indiehackers(limit: int) -> list[Lead]:\n    \"\"\"Main entry: scrape all author leads from Indie Hackers sitemaps.\"\"\"\n    sitemap_url = \"https://storage.googleapis.com/indie-hackers.appspot.com/sitemaps/ih-sitemap-5.xml\" # Only #5 has authors\n    leads: list[Lead] = []\n    lead_count = 0\n    page_urls = fetch_sitemap_urls(sitemap_url) # Step 1: Fetch page URLs\n    authors = extract_author_urls(page_urls) # Step 2: Extract author URLs in pages\n    logger.info(f\"Found {len(authors)} author URLs in {sitemap_url}\")\n    for author in authors: # Step 3: Parse each author page\n        if lead_count >= limit:",
+        "peekOfCode": "def scrape_indiehackers(limit: typing.Optional[int] = None) -> list[Lead]:\n    \"\"\"Main entry: scrape all author leads from Indie Hackers sitemaps.\"\"\"\n    leads = fetch_all_leads(limit)\n    return leads",
         "detail": "server.app.scrapers.spiders.indiehackers.scrape",
         "documentation": {}
     },
@@ -553,25 +817,16 @@
         "kind": 5,
         "importPath": "server.app.scrapers.spiders.indiehackers.scrape",
         "description": "server.app.scrapers.spiders.indiehackers.scrape",
-        "peekOfCode": "logger = get_logger(__name__)\ndef scrape_indiehackers(limit: int) -> list[Lead]:\n    \"\"\"Main entry: scrape all author leads from Indie Hackers sitemaps.\"\"\"\n    sitemap_url = \"https://storage.googleapis.com/indie-hackers.appspot.com/sitemaps/ih-sitemap-5.xml\" # Only #5 has authors\n    leads: list[Lead] = []\n    lead_count = 0\n    page_urls = fetch_sitemap_urls(sitemap_url) # Step 1: Fetch page URLs\n    authors = extract_author_urls(page_urls) # Step 2: Extract author URLs in pages\n    logger.info(f\"Found {len(authors)} author URLs in {sitemap_url}\")\n    for author in authors: # Step 3: Parse each author page",
+        "peekOfCode": "logger = get_logger(__name__)\ndef scrape_indiehackers(limit: typing.Optional[int] = None) -> list[Lead]:\n    \"\"\"Main entry: scrape all author leads from Indie Hackers sitemaps.\"\"\"\n    leads = fetch_all_leads(limit)\n    return leads",
         "detail": "server.app.scrapers.spiders.indiehackers.scrape",
         "documentation": {}
     },
     {
-        "label": "extract_author_urls",
+        "label": "build_subdivision",
         "kind": 2,
         "importPath": "server.app.scrapers.spiders.indiehackers.utils",
         "description": "server.app.scrapers.spiders.indiehackers.utils",
-        "peekOfCode": "def extract_author_urls(urls: list[str]) -> list[dict[str, str]]:\n    \"\"\"Filter URLs -> slugs to only include Indie Hackers author profile pages.\"\"\"\n    authors = []\n    NON_USER = {\"post\", \"forum\", \"tag\", \"search\", \"pricing\", \"about\", \"terms\", \"privacy\", \"stories\", \"jobs\", \"events\", \"products\", \"podcast\", \"community\", \"resources\", \"help\", \"contact\", \"login\", \"signup\", \"ideas\",\"newest\",\"starting-up\",\"trending\",\"popular\", \"ai-coding-tools\", }\n    logger.info(f\"Extracting author URLs from {len(urls)} URLs\")\n    for u in urls: # Step 2: Filter URLs\n        p = urlparse(u)\n        netloc = p.netloc.lower().split(\":\", 1)[0]\n        if netloc not in (\"indiehackers.com\", \"www.indiehackers.com\"):\n            continue",
-        "detail": "server.app.scrapers.spiders.indiehackers.utils",
-        "documentation": {}
-    },
-    {
-        "label": "get_algolia",
-        "kind": 2,
-        "importPath": "server.app.scrapers.spiders.indiehackers.utils",
-        "description": "server.app.scrapers.spiders.indiehackers.utils",
-        "peekOfCode": "def get_algolia(): # Initially used to fetch Algolia credentials\n    html   = requests.get(\"https://www.indiehackers.com\").text       \n    soup   = bs4.BeautifulSoup(html, \"html.parser\")\n    meta   = soup.find(\"meta\", {\n                 \"name\": re.compile(r\"indie-hackers/config/environment\", re.I)\n             })\n    env    = json.loads(urllib.parse.unquote(meta[\"content\"]))\n    print(env[\"algolia\"][\"applicationId\"])        # N86T1R3OWZ\n    print(env[\"algolia\"][\"searchOnlyApiKey\"])     # 5140dac5e87…\n    print(env[\"algolia\"])              # This contains index names",
+        "peekOfCode": "def build_subdivision(\n    threshold: int = 1000,\n    max_depth: int = MAX_DEPTH,\n    prefixes: list[str] = USERNAME_PREFIXES,\n):\n    \"\"\"Build a subdivision string based on the prefix and depth.\"\"\"\n    subdivisions: list[str] = []\n    backoff = 1\n    queue = deque(\n        (p, 1) for p in prefixes",
         "detail": "server.app.scrapers.spiders.indiehackers.utils",
         "documentation": {}
     },
@@ -580,7 +835,7 @@
         "kind": 5,
         "importPath": "server.app.scrapers.spiders.indiehackers.utils",
         "description": "server.app.scrapers.spiders.indiehackers.utils",
-        "peekOfCode": "logger = get_logger(__name__)\ndef extract_author_urls(urls: list[str]) -> list[dict[str, str]]:\n    \"\"\"Filter URLs -> slugs to only include Indie Hackers author profile pages.\"\"\"\n    authors = []\n    NON_USER = {\"post\", \"forum\", \"tag\", \"search\", \"pricing\", \"about\", \"terms\", \"privacy\", \"stories\", \"jobs\", \"events\", \"products\", \"podcast\", \"community\", \"resources\", \"help\", \"contact\", \"login\", \"signup\", \"ideas\",\"newest\",\"starting-up\",\"trending\",\"popular\", \"ai-coding-tools\", }\n    logger.info(f\"Extracting author URLs from {len(urls)} URLs\")\n    for u in urls: # Step 2: Filter URLs\n        p = urlparse(u)\n        netloc = p.netloc.lower().split(\":\", 1)[0]\n        if netloc not in (\"indiehackers.com\", \"www.indiehackers.com\"):",
+        "peekOfCode": "logger = get_logger(__name__)\ndef build_subdivision(\n    threshold: int = 1000,\n    max_depth: int = MAX_DEPTH,\n    prefixes: list[str] = USERNAME_PREFIXES,\n):\n    \"\"\"Build a subdivision string based on the prefix and depth.\"\"\"\n    subdivisions: list[str] = []\n    backoff = 1\n    queue = deque(",
         "detail": "server.app.scrapers.spiders.indiehackers.utils",
         "documentation": {}
     },
@@ -598,7 +853,7 @@
         "kind": 2,
         "importPath": "server.app.logging_config",
         "description": "server.app.logging_config",
-        "peekOfCode": "def configure_root_logger():\n    if logging.root.handlers:\n        return\n    logging.basicConfig(\n        level=logging.DEBUG,           \n        format=\"%(asctime)s %(levelname)s %(name)s: %(message)s\",\n        stream=sys.stdout,\n    )\ndef get_logger(name: str) -> logging.Logger:\n    return logging.getLogger(name)",
+        "peekOfCode": "def configure_root_logger(logfile: str = \"logs/app.log\"):\n    for h in logging.root.handlers[:]: # Clear out any old handlers\n        logging.root.removeHandler(h)\n    log_path = Path(logfile)\n    log_path.parent.mkdir(parents=True, exist_ok=True)\n    # (1) Create a rotating file handler\n    file_handler = RotatingFileHandler(\n        filename=str(logfile),\n        mode=\"a\",              # append\n        maxBytes=10 * 1024**2, # rotate after ~10 MB",
         "detail": "server.app.logging_config",
         "documentation": {}
     },
@@ -607,7 +862,7 @@
         "kind": 2,
         "importPath": "server.app.logging_config",
         "description": "server.app.logging_config",
-        "peekOfCode": "def get_logger(name: str) -> logging.Logger:\n    return logging.getLogger(name)",
+        "peekOfCode": "def get_logger(name: str) -> logging.Logger:\n    # make sure you've already called configure_root_logger()\n    return logging.getLogger(name)",
         "detail": "server.app.logging_config",
         "documentation": {}
     },

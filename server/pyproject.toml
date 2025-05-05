@@ -1,0 +1,28 @@
+[tool.black]
+# PEP8 / Black default line length
+line-length = 88
+
+# Target Python versions (adjust to your min‐supported)
+target-version = ['py38', 'py39', 'py310']
+
+# Don’t mangle string quotes (optional; Black defaults to double quotes)
+# skip-string-normalization = true
+
+# Files to include (Python files and stubs)
+include = '\.pyi?$'
+
+# Directories and files to skip
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+)/
+'''

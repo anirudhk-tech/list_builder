@@ -1,0 +1,10 @@
+{
+  "name": "lead-finder",
+  "private": true,
+  "workspaces": [
+    "client"
+  ],
+  "scripts": {
+    "format:py": "black server/app"
+  }
+}
