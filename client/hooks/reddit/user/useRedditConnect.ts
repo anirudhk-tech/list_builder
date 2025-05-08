@@ -1,17 +1,23 @@
 import { setRedditUsername } from "@/store/slices/userSlice";
 import { signIn, useSession } from "next-auth/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useRedditData } from "./useRedditData";
 
 export const useRedditConnect = () => {
   const { data: session, status } = useSession();
   const { handleFetchRedditData } = useRedditData();
+  const hasFetched = useRef(false);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (status === "authenticated" && session.user.name) {
+    if (
+      status === "authenticated" &&
+      session.user.name &&
+      !hasFetched.current
+    ) {
+      hasFetched.current = true;
       dispatch(setRedditUsername(session.user.name));
       handleFetchRedditData().catch(console.error);
     }

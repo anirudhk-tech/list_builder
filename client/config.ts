@@ -8,7 +8,7 @@ const env = z
     OPENAI_API_KEY: z.string().nonempty(),
     SUPABASE_URL: z.string().url(),
     SUPABASE_SECRET_KEY: z.string().nonempty(),
-    EMBEDDING_MODEL: z.string().default("text-embedding-ada-002"),
+    EMBEDDING_MODEL: z.string().default("text-embedding-3-small"),
     SUMMARY_MODEL: z.string().default("gpt-3.5-turbo"),
     SUMMARY_TOKEN_LIMIT: z.number().default(100),
     OPENAI_ACTIVE: z.string(),

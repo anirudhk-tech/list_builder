@@ -1,6 +1,7 @@
 import {
-  embedRedditData,
+  embedSummary,
   normalizeRedditData,
+  selectDocs,
   summarizeRedditData,
 } from "@/lib/redditProcess";
 import {
@@ -10,6 +11,8 @@ import {
   RedditComment,
   RedditPost,
   RedditUser,
+  RedditSubreddit,
+  KarmaListing,
 } from "@/types/reddit";
 import { getToken } from "next-auth/jwt";
 import { NextRequest, NextResponse } from "next/server";
@@ -41,34 +44,49 @@ export async function POST(request: NextRequest) {
   }
 
   // Fetch user data from Reddit API
-  const me = await fetchJson<RedditUser>(
+  const user = await fetchJson<RedditUser>(
     `${REDDIT_API_URL}/api/v1/me`,
     token.accessToken as string
   );
 
   const [subs, comms] = await Promise.all([
-    // 50 subs, 100 comments
+    // 100 subs, 100 comments
     fetchJson<Listing<RedditPost>>(
-      `${REDDIT_API_URL}/user/${me.name}/submitted?limit=50`,
+      `${REDDIT_API_URL}/user/${user.name}/submitted?limit=100`,
       token.accessToken as string
     ),
     fetchJson<Listing<RedditComment>>(
-      `${REDDIT_API_URL}/user/${me.name}/comments?limit=100`,
+      `${REDDIT_API_URL}/user/${user.name}/comments?limit=100`,
       token.accessToken as string
     ),
   ]);
 
+  const subscrList = await fetchJson<Listing<RedditSubreddit>>( // Fetch subscribed subreddits
+    // 100 subs
+    `${REDDIT_API_URL}/subreddits/mine/subscriber?limit=100`,
+    token.accessToken as string
+  );
+
+  const karma = await fetchJson<KarmaListing>(
+    // Fetch karma for each subreddit
+    `${REDDIT_API_URL}/api/v1/me/karma`,
+    token.accessToken as string
+  );
+
   const raw: RawRedditResponse = {
     success: true,
-    user: me,
+    user: user,
     subs: subs.data.children.map((sub) => sub.data),
     comms: comms.data.children.map((com) => com.data),
+    subscrList: subscrList.data.children.map((sub) => sub.data),
+    karmaList: karma.data.karma,
   };
 
   // Normalize, embed, and summarize the data
   const docs = await normalizeRedditData(raw);
-  const embedding = await embedRedditData(docs);
-  const summary = await summarizeRedditData(docs);
+  const highValueDocs = await selectDocs(docs);
+  const summary = await summarizeRedditData(highValueDocs);
+  const embedding = await embedSummary(summary);
 
   // Prepare the response
   const response = {

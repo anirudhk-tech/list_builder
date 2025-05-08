@@ -10,6 +10,17 @@ export interface Listing<T> {
   };
 }
 
+export interface KarmaListing {
+  kind: string;
+  data: {
+    karma: Array<{
+      sr: string; // subreddit name without the "r/"
+      comment_karma: number;
+      link_karma: number;
+    }>;
+  };
+}
+
 // ─── 1) Raw Reddit data endpoint ────────────────────────────────────────────────
 
 /** Minimal user‐level profile fields */
@@ -52,6 +63,15 @@ export interface RedditPost {
   all_awardings: unknown[];
 }
 
+/** Minimal subreddit fields */
+export interface RedditSubreddit {
+  id: string;
+  display_name_prefixed: string;
+  public_description: string;
+  subscribers: number;
+  over_18: boolean;
+}
+
 /** Minimal comment fields */
 export interface RedditComment {
   id: string;
@@ -68,12 +88,21 @@ export interface RedditComment {
   all_awardings: unknown[];
 }
 
+/** Karma to check subreddit engagement*/
+export interface RedditSubredditKarma {
+  sr: string; // subreddit name without the "r/"
+  comment_karma: number;
+  link_karma: number;
+}
+
 /** Response from GET /api/reddit (raw fetch) */
 export interface RawRedditResponse {
   success: true;
   user: RedditUser;
   subs: RedditPost[];
   comms: RedditComment[];
+  subscrList: RedditSubreddit[];
+  karmaList: RedditSubredditKarma[];
 }
 
 // ─── 2) “Refresh & normalize” endpoint ────────────────────────────────────────
@@ -134,7 +163,13 @@ export interface CommentDoc extends BaseDoc {
   };
 }
 
-export type Doc = ProfileDoc | PostDoc | CommentDoc;
+/** Subscription doc (your “subreddits” chunk) */
+export interface SubscriptionDoc extends BaseDoc {
+  type: "subscription";
+  metadata: { subscribers: number; over_18: boolean; personalKarma: number };
+}
+
+export type Doc = ProfileDoc | PostDoc | CommentDoc | SubscriptionDoc;
 
 /** Response from POST /api/reddit/process */
 export interface ProcessedRedditResponse {
