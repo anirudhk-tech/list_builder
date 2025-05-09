@@ -4,11 +4,13 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface MatchSlice {
   matches: MatchCandidate[];
   query: string;
+  selectedMatch: MatchCandidate | null;
 }
 
 const initialState: MatchSlice = {
   matches: [],
   query: "I'm just browsing rn",
+  selectedMatch: null,
 };
 
 export const matchSlice = createSlice({
@@ -17,6 +19,7 @@ export const matchSlice = createSlice({
   reducers: {
     setMatches: (state, action) => {
       state.matches = action.payload;
+      state.selectedMatch = state.matches[0] || null;
     },
     clearMatches: (state) => {
       state.matches = [];
@@ -28,6 +31,10 @@ export const matchSlice = createSlice({
       );
       if (match) {
         match.explanation = explanation;
+
+        if (state.selectedMatch?.redditUsername === matchUsername) {
+          state.selectedMatch = match;
+        }
       }
     },
     setQuery: (state, action) => {
@@ -35,6 +42,9 @@ export const matchSlice = createSlice({
     },
     clearQuery: (state) => {
       state.query = "I'm just browsing rn";
+    },
+    setSelectedMatch: (state, action) => {
+      state.selectedMatch = action.payload;
     },
   },
 });
@@ -45,5 +55,6 @@ export const {
   setMatchExplanation,
   setQuery,
   clearQuery,
+  setSelectedMatch,
 } = matchSlice.actions;
 export default matchSlice.reducer;

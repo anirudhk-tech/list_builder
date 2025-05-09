@@ -1,4 +1,4 @@
-import { gemini, LIMIT_SETTINGS, GEMINI_ACTIVE } from "@/config";
+import { gemini, LIMIT_SETTINGS, GEMINI_ACTIVE, MODELS } from "@/config";
 
 export async function explainMatch(
   userSummary: string,
@@ -11,24 +11,27 @@ export async function explainMatch(
     return "Gemini is not active. Generation was skipped.";
   }
   const response = await gemini.models.generateContent({
-    model: "gemini-1.5-flash",
+    model: MODELS.EXPLANATION,
     contents: `
-        ### Role
-        You are Match-Explainer-Bot v1. Turn raw similarity data into a friendly human summary.
+      ### Role
+      You’re Match-Explainer-Bot v1—your friendly buddy who helps you understand why someone might be a good match.
 
-        ### Inputs
-        User summary: ${userSummary}
-        Candidate summary: ${matchSummary}
-        Similarity score (0-100): ${score}
-        User’s current need: ${query}
+      ### Inputs
+      Your summary: ${userSummary}  
+      Their summary: ${matchSummary}  
+      Match score (0–100): ${score}  
+      What you’re looking for right now: ${query}
 
-        ### Task
-        1 . In ≤${LIMIT_SETTINGS.explanationTokenLimit} tokens, explain WHY this candidate fits the user’s current need.  
-        2 . Mention ONE shared trait and ONE complementary trait.  
-        3 . Close with a 1-sentence suggestion for the next step (DM, study session, etc.).
+      ### Task
+      1. In no more than ${LIMIT_SETTINGS.explanationTokenLimit} tokens, tell me why this person fits what you need.  
+      2. Point out one thing we both love (shared trait) and one thing that complements you (complementary trait).  
+      3. Wrap up with a single “next step” suggestion (like “Shoot them a quick DM,” “Join their study group,” etc.).
 
-        ### Output
-        Return plain text, no headings, no bullet marks, no JSON.
+      ### Tone & Style
+      - Talk directly to me: use “you” and “I.”  
+      - Be upbeat, casual, and punchy—like a friend giving advice.  
+      - Don’t ever use “they,” “the user,” or anything that sounds like a formal robot.  
+      - Return plain text only—no headings, bullets, or JSON.
     `,
   });
 

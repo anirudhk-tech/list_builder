@@ -2,7 +2,7 @@ import { explainMatch } from "@/lib/explainProcess";
 import { MatchExplanationRequest } from "@/types/reddit";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
+export async function POST(req: NextRequest) {
   try {
     const { userSummary, query, matchSummary, score } =
       ((await req.json()) as MatchExplanationRequest) || {};

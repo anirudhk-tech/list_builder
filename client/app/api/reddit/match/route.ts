@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
+      console.error("Error fetching match candidates:", error);
       return NextResponse.json({ error: error.message }, { status: 500 });
     }
 

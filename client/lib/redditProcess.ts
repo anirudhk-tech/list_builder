@@ -280,13 +280,6 @@ export async function selectDocs(all: Doc[]) {
     text: d.text.length > 400 ? d.text.slice(0, 400) + "..." : d.text,
   });
 
-  console.log("Selected docs:", {
-    profileDocs,
-    postDocs: postDocs,
-    commentDocs: commentDocs,
-    subscriptionDocs: subscriptionDocs,
-  });
-
   return [
     profileDocs,
     ...postDocs.map(truncate),

@@ -1,14 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardAction,
-  CardDescription,
-} from "@/components/ui/card";
+import { motion, AnimatePresence } from "framer-motion";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar } from "@/components/ui/avatar";
 import { Navbar } from "@/components/layout/navbar";
@@ -16,42 +9,22 @@ import { Footer } from "@/components/layout/footer";
 import { FaUserCircle } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { MainState } from "@/store/store";
-import { MatchCandidate } from "@/types/match";
 import Image from "next/image";
 import { useRedditExplanation } from "@/hooks/reddit/user/useRedditExplanation";
-import { setMatchExplanation } from "@/store/slices/matchSlice";
+import { setSelectedMatch } from "@/store/slices/matchSlice";
+
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function MatchPage() {
-  const matches = useSelector((state: MainState) => state.match.matches);
   const dispatch = useDispatch();
-  const query = useSelector((state: MainState) => state.match.query);
-  const { handleExplain } = useRedditExplanation();
-  const [selectedMatch, setSelectedMatch] = useState<MatchCandidate | null>(
-    matches && matches.length ? matches[0] : null
+  const matches = useSelector((state: MainState) => state.match.matches);
+  const selectedMatch = useSelector(
+    (state: MainState) => state.match.selectedMatch
   );
-
-  useEffect(() => {
-    const handleSelectedMatch = async () => {
-      if (selectedMatch) {
-        const { summary, score } = selectedMatch;
-        const explanation = await handleExplain(
-          summary,
-          score.toString(),
-          query
-        );
-        if (explanation) {
-          dispatch(
-            setMatchExplanation({
-              matchUsername: selectedMatch.redditUsername,
-              explanation,
-            })
-          );
-        }
-      }
-    };
-
-    handleSelectedMatch();
-  }, [selectedMatch, query, handleExplain, dispatch]);
+  useRedditExplanation();
 
   return (
     <main className="flex flex-col h-screen max-h-screen w-full bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden font-sans">
@@ -75,7 +48,7 @@ export default function MatchPage() {
                   className={`transition rounded-2xl border-gray-800 bg-gray-900/60 backdrop-blur-lg cursor-pointer hover:border-red-500/70 ${
                     selectedMatch?.id === match.id ? "border-red-500" : ""
                   }`}
-                  onClick={() => setSelectedMatch(match)}
+                  onClick={() => dispatch(setSelectedMatch(match))}
                 >
                   <CardHeader className="flex flex-row items-center gap-4 pb-4">
                     <Avatar className="h-12 w-12">
@@ -120,17 +93,15 @@ export default function MatchPage() {
           className="md:col-span-4 flex flex-col min-h-0 overflow-hidden"
         >
           {selectedMatch ? (
-            <Card className="flex flex-col flex-1 bg-gray-900/60 backdrop-blur-lg border-gray-800 rounded-3xl shadow-2xl">
-              <CardHeader className="border-b border-gray-800">
-                <CardAction className="bg-red-500 py-2 px-4 rounded-xl text-white">
-                  Find on Reddit
-                </CardAction>
+            <Card className="flex flex-col flex-1 min-h-0 bg-gray-900/60 backdrop-blur-lg border-gray-800 rounded-3xl shadow-2xl">
+              {/* ───────── Header ───────── */}
+              <CardHeader className="border-b border-gray-800 flex items-center justify-between gap-4">
                 <CardTitle className="flex items-center gap-3 text-lg">
                   <Avatar className="h-10 w-10">
                     {selectedMatch.avatarUrl ? (
                       <Image
                         src={selectedMatch.avatarUrl}
-                        alt="Avatar"
+                        alt={`${selectedMatch.redditUsername} avatar`}
                         width={48}
                         height={48}
                         className="rounded-full"
@@ -144,14 +115,70 @@ export default function MatchPage() {
                     {selectedMatch.redditUsername}
                   </span>
                 </CardTitle>
+
+                <button
+                  className="bg-red-500 hover:bg-red-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-red-400
+                 py-2 px-4 rounded-xl text-white text-sm font-medium transition"
+                  onClick={() =>
+                    window.open(
+                      `https://reddit.com/u/${selectedMatch.redditUsername}`,
+                      "_blank"
+                    )
+                  }
+                >
+                  View on Reddit
+                </button>
               </CardHeader>
-              <CardDescription className="flex-1 p-4 text-gray-300">
-                {selectedMatch.explanation ? (
-                  <span>{selectedMatch.explanation}</span>
-                ) : (
-                  <span>Generating explanation...</span>
-                )}
-              </CardDescription>
+
+              {/* ───────── Content split ───────── */}
+              <div className="flex-1 flex min-h-0 flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-gray-800 overflow-hidden">
+                <section
+                  aria-labelledby="your-summary-heading"
+                  className="flex-1 p-4 overflow-auto scrollbar-thin scrollbar-thumb-gray-700 [&::-webkit-scrollbar]:hidden"
+                >
+                  <h3
+                    id="your-summary-heading"
+                    className="text-gray-400 text-sm font-semibold mb-2"
+                  >
+                    Who They Are
+                  </h3>
+                  <p className="leading-relaxed whitespace-pre-wrap break-words text-gray-200">
+                    {selectedMatch.summary || "No summary available."}
+                  </p>
+                </section>
+
+                <section
+                  aria-labelledby="match-explanation-heading"
+                  className="flex-1 min-h-0 p-4 overflow-y-auto [&::-webkit-scrollbar]:hidden"
+                >
+                  <h3
+                    id="match-explanation-heading"
+                    className="text-gray-400 text-sm font-semibold mb-2"
+                  >
+                    Why this matches
+                  </h3>
+
+                  {selectedMatch.explanation ? (
+                    <AnimatePresence mode="wait">
+                      <motion.p
+                        key={selectedMatch.explanation} // key so AnimatePresence sees it as “new”
+                        variants={fadeInVariant}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        className="leading-relaxed whitespace-pre-wrap break-words text-gray-200"
+                      >
+                        {selectedMatch.explanation}
+                      </motion.p>
+                    </AnimatePresence>
+                  ) : (
+                    <p className="italic text-gray-500">
+                      Generating explanation…
+                    </p>
+                  )}
+                </section>
+              </div>
             </Card>
           ) : (
             <div className="flex-1 flex items-center justify-center text-gray-400">

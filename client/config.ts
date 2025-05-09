@@ -31,6 +31,7 @@ export const supabase = createClient(env.SUPABASE_URL, env.SUPABASE_SECRET_KEY);
 export const MODELS = {
   EMBEDDING: env.EMBEDDING_MODEL,
   SUMMARY: env.SUMMARY_MODEL,
+  EXPLANATION: env.EXPLANATION_MODEL,
 };
 export const LIMIT_SETTINGS = {
   summaryTokenLimit: env.SUMMARY_TOKEN_LIMIT,
