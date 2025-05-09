@@ -1,79 +1,60 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Card,
   CardHeader,
   CardTitle,
-  CardDescription,
   CardAction,
+  CardDescription,
 } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar } from "@/components/ui/avatar";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { FaUserCircle } from "react-icons/fa";
-
-interface Match {
-  id: number;
-  username: string;
-  tagline?: string;
-  score: number;
-}
-
-const dummyMatches: Match[] = [
-  {
-    id: 1,
-    username: "tech_wizard",
-    tagline: "AI + Programming Enthusiast",
-    score: 80,
-  },
-  {
-    id: 2,
-    username: "book_nerd",
-    tagline: "Fantasy & Sci‑fi Lover",
-    score: 70,
-  },
-  {
-    id: 3,
-    username: "fitness_freak",
-    tagline: "Gym • Calisthenics • Reddit",
-    score: 15,
-  },
-  {
-    id: 4,
-    username: "memes_daily",
-    tagline: "Dank meme curator 🧨",
-    score: 33,
-  },
-  {
-    id: 5,
-    username: "memes_daily",
-    tagline: "Dank meme curator 🧨",
-    score: 33,
-  },
-  {
-    id: 6,
-    username: "memes_daily",
-    tagline: "Dank meme curator 🧨",
-    score: 33,
-  },
-  {
-    id: 7,
-    username: "memes_daily",
-    tagline: "Dank meme curator 🧨",
-    score: 33,
-  },
-];
+import { useDispatch, useSelector } from "react-redux";
+import { MainState } from "@/store/store";
+import { MatchCandidate } from "@/types/match";
+import Image from "next/image";
+import { useRedditExplanation } from "@/hooks/reddit/user/useRedditExplanation";
+import { setMatchExplanation } from "@/store/slices/matchSlice";
 
 export default function MatchPage() {
-  const [selectedMatch, setSelectedMatch] = useState<Match | null>(
-    dummyMatches[0]
+  const matches = useSelector((state: MainState) => state.match.matches);
+  const dispatch = useDispatch();
+  const query = useSelector((state: MainState) => state.match.query);
+  const { handleExplain } = useRedditExplanation();
+  const [selectedMatch, setSelectedMatch] = useState<MatchCandidate | null>(
+    matches && matches.length ? matches[0] : null
   );
 
+  useEffect(() => {
+    const handleSelectedMatch = async () => {
+      if (selectedMatch) {
+        const { summary, score } = selectedMatch;
+        const explanation = await handleExplain(
+          summary,
+          score.toString(),
+          query
+        );
+        if (explanation) {
+          dispatch(
+            setMatchExplanation({
+              matchUsername: selectedMatch.redditUsername,
+              explanation,
+            })
+          );
+        }
+      }
+    };
+
+    handleSelectedMatch();
+  }, [selectedMatch, query, handleExplain, dispatch]);
+
   return (
-    <main className="flex flex-col max-h-screen w-full bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden font-sans">
+    <main className="flex flex-col h-screen max-h-screen w-full bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden font-sans">
       <Navbar />
 
       {/* MAIN GRID — header+footer subtract ~8rem (adjust if your navbar/footer differ) */}
@@ -88,7 +69,7 @@ export default function MatchPage() {
           <h2 className="text-xl font-semibold mb-4">Your Matches</h2>
           <ScrollArea className="flex-1 pr-5 overflow-auto">
             <div className="space-y-4">
-              {dummyMatches.map((match) => (
+              {matches?.map((match) => (
                 <Card
                   key={match.id}
                   className={`transition rounded-2xl border-gray-800 bg-gray-900/60 backdrop-blur-lg cursor-pointer hover:border-red-500/70 ${
@@ -98,15 +79,23 @@ export default function MatchPage() {
                 >
                   <CardHeader className="flex flex-row items-center gap-4 pb-4">
                     <Avatar className="h-12 w-12">
-                      <FaUserCircle className="h-full w-full" />
+                      {match.avatarUrl ? (
+                        <Image
+                          src={match.avatarUrl}
+                          alt="Avatar"
+                          width={48}
+                          height={48}
+                          className="rounded-full"
+                          unoptimized
+                        />
+                      ) : (
+                        <FaUserCircle className="h-full w-full" />
+                      )}
                     </Avatar>
                     <div>
                       <CardTitle className="text-white leading-none mb-1">
-                        {match.username}
+                        {match.redditUsername}
                       </CardTitle>
-                      <CardDescription className="text-xs text-gray-400 max-w-[9rem]">
-                        {match.tagline}
-                      </CardDescription>
                     </div>
                   </CardHeader>
                   <div className="mt-2 h-2 w-4/5 rounded-full bg-gray-800 overflow-hidden self-center">
@@ -138,14 +127,31 @@ export default function MatchPage() {
                 </CardAction>
                 <CardTitle className="flex items-center gap-3 text-lg">
                   <Avatar className="h-10 w-10">
-                    <FaUserCircle className="h-full w-full" />
+                    {selectedMatch.avatarUrl ? (
+                      <Image
+                        src={selectedMatch.avatarUrl}
+                        alt="Avatar"
+                        width={48}
+                        height={48}
+                        className="rounded-full"
+                        unoptimized
+                      />
+                    ) : (
+                      <FaUserCircle className="h-full w-full" />
+                    )}
                   </Avatar>
-                  <span className="text-white">{selectedMatch.username}</span>
+                  <span className="text-white">
+                    {selectedMatch.redditUsername}
+                  </span>
                 </CardTitle>
-                <CardDescription className="text-white">
-                  {selectedMatch.tagline}
-                </CardDescription>
               </CardHeader>
+              <CardDescription className="flex-1 p-4 text-gray-300">
+                {selectedMatch.explanation ? (
+                  <span>{selectedMatch.explanation}</span>
+                ) : (
+                  <span>Generating explanation...</span>
+                )}
+              </CardDescription>
             </Card>
           ) : (
             <div className="flex-1 flex items-center justify-center text-gray-400">

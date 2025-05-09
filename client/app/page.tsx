@@ -12,21 +12,35 @@ import {
 import { Input } from "@/components/ui/input";
 import { FaReddit } from "react-icons/fa";
 import { FaFireFlameCurved } from "react-icons/fa6";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { MainState } from "@/store/store";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { useState } from "react";
 import { ConsentDialog } from "@/components/features/home/consent-dialog";
 import { useRouter } from "next/navigation";
+import { useRedditMatch } from "@/hooks/reddit/user/useRedditMatch";
+import { setQuery } from "@/store/slices/matchSlice";
 
 export default function HomePage() {
   const router = useRouter();
+  const dispatch = useDispatch();
+  const matchQuery = useSelector((state: MainState) => state.match.query);
   const [consentDialogOpen, setConsentDialogOpen] = useState(false);
-  const [matchQuery, setMatchQuery] = useState("I'm just browsing rn");
+
   const redditUsername = useSelector(
     (state: MainState) => state.user.redditUsername
   );
+  const { handleFetchMatches } = useRedditMatch();
+
+  const handleFindMatches = async () => {
+    if (matchQuery.trim().length === 0 || !redditUsername) {
+      return;
+    } else {
+      await handleFetchMatches(matchQuery);
+      router.push("/match");
+    }
+  };
 
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-x-hidden font-sans">
@@ -106,20 +120,13 @@ export default function HomePage() {
               <Input
                 placeholder="What do you want to find?"
                 className="rounded-xl bg-gray-800 mt-4 text-white"
-                onChange={(e) => setMatchQuery(e.target.value)}
+                onChange={(e) => dispatch(setQuery(e.target.value))}
                 value={matchQuery}
               />
             </CardContent>
           </Card>
 
-          <Button
-            className="bg-red-500"
-            onClick={() =>
-              matchQuery.replace(" ", "").length !== 0 && redditUsername
-                ? router.push("/match")
-                : () => {}
-            }
-          >
+          <Button className="bg-red-500" onClick={handleFindMatches}>
             Find me my people!
           </Button>
         </motion.div>

@@ -27,3 +27,9 @@
 - **What I built:** Finished Reddit data parsing and OpenAI agentic system
 - **Why it matters:** Reddit data parsed marks a big pivot in FlamesAI. Now we can focus on matching and summarizing (possibly with Gemini)
 - **Next:** Finish matching algorithm and indegrate Gemini agent to summarize matches
+
+### 2025-05-08 | 8:01 PM 🧭 Daily Log
+
+- **What I built:** Finished matching algorithm and set up gemini explanation, pending testing
+- **Why it matters:** With explanations and matching complete. The MVP is nearly done, just testing left.
+- **Next:** Test and finish explanations.

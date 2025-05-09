@@ -1,4 +1,8 @@
 export interface MatchCandidate {
-  username: string;
-  embedding: number[];
+  id: number;
+  redditUsername: string;
+  score: number;
+  summary: string;
+  avatarUrl: string;
+  explanation?: string;
 }

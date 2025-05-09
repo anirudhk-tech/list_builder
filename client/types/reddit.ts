@@ -35,6 +35,7 @@ export interface RedditUser {
   awarder_karma: number;
   icon_img: string;
   snoovatar_img: string;
+  over_18: boolean;
   subreddit: {
     public_description: string;
     subscribers: number;
@@ -86,6 +87,7 @@ export interface RedditComment {
   is_submitter: boolean;
   stickied: boolean;
   all_awardings: unknown[];
+  over_18: boolean;
 }
 
 /** Karma to check subreddit engagement*/
@@ -126,6 +128,7 @@ export interface ProfileDoc extends BaseDoc {
     awarder_karma: number;
     public_description: string;
     subreddit_subscribers: number;
+    over_18: boolean;
   };
 }
 
@@ -140,10 +143,10 @@ export interface PostDoc extends BaseDoc {
     ups: number;
     downs: number;
     num_comments: number;
-    over_18: boolean;
     spoiler: boolean;
     stickied: boolean;
     award_count: number;
+    over_18: boolean;
   };
 }
 
@@ -160,6 +163,7 @@ export interface CommentDoc extends BaseDoc {
     is_submitter: boolean;
     stickied: boolean;
     award_count: number;
+    over_18: boolean;
   };
 }
 
@@ -197,4 +201,12 @@ export interface MatchResult {
 /** Response from POST /api/search */
 export interface SearchResponse {
   results: MatchResult[];
+}
+
+// ─── 4) User match explanation endpoint ────────────────────────────────────────
+export interface MatchExplanationRequest {
+  query: string;
+  score: number;
+  matchSummary: string;
+  userSummary: string;
 }

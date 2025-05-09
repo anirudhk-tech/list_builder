@@ -1,4 +1,4 @@
-import { setRedditUsername } from "@/store/slices/userSlice";
+import { clearRedditUser } from "@/store/slices/userSlice";
 import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
@@ -14,7 +14,7 @@ export const useRedditDisconnect = () => {
 
     console.log("Reddit account disconnected.");
 
-    dispatch(setRedditUsername(null));
+    dispatch(clearRedditUser());
     router.push("/");
   };
 

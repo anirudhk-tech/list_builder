@@ -1,5 +1,5 @@
 import { supabase } from "@/config";
-import { UserFetch } from "@/types/supabase";
+import { User } from "@/types/supabase";
 import { getToken } from "next-auth/jwt";
 import { NextRequest, NextResponse } from "next/server";
 
@@ -23,10 +23,12 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "User not found" }, { status: 404 });
   }
 
-  const response: UserFetch = {
+  const response: User = {
     reddit_username: data.reddit_username,
     updated_at: data.updated_at,
+    avatar_url: data.avatar_url,
+    summary: data.summary,
   };
 
-  return NextResponse.json<UserFetch>(response);
+  return NextResponse.json<User>(response);
 }

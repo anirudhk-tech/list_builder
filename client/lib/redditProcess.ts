@@ -1,4 +1,4 @@
-import { MODELS, openai, OPENAI_ACTIVE, SUMMARY_SETTINGS } from "@/config";
+import { MODELS, openai, OPENAI_ACTIVE, LIMIT_SETTINGS } from "@/config";
 import {
   CommentDoc,
   Doc,
@@ -10,7 +10,7 @@ import {
 
 const SYS_PROMPT = `
 [First Layer - Details]
-You are Personality‑Synthesizer v3. Generate a vivid Reddit‑footprint bio no longer than ${SUMMARY_SETTINGS.tokenLimit} tokens.
+You are Personality‑Synthesizer v3. Generate a vivid Reddit‑footprint bio no longer than ${LIMIT_SETTINGS.summaryTokenLimit} tokens.
 Required domains (include all six):
 
 Core values & worldview
@@ -26,6 +26,7 @@ Lifestyle habits & routines
 Balance rules: no single domain may exceed 25 % of the tokens.
 Tone: upbeat, third‑person, 2‑3 punchy sentences.
 No PII, hashtags, clichés, or speculation.
+No NSFW, politics, or religion.
 
 [Second Layer - Steps]
 
@@ -127,12 +128,11 @@ function docsToText(docs: Doc[]): string {
     .join("\n\n");
 }
 
-function getDiversePosts(
+function selectPosts(
   all: PostDoc[],
   topSubNames: string[],
   desiredCount = 5
 ): PostDoc[] {
-  console.log("DOCS: ", all);
   // 1. Group & sort
   const bySub = new Map<string, PostDoc[]>();
   for (const d of all) {
@@ -179,6 +179,39 @@ function getDiversePosts(
   }
 
   return result;
+}
+
+function selectComments(
+  all: CommentDoc[],
+  topSubNames: string[],
+  desiredCount = 8
+): CommentDoc[] {
+  const results = Array.from(
+    new Map(
+      all
+        .filter(
+          (d): d is CommentDoc =>
+            d.type === "comment" && topSubNames.includes(d.metadata.subreddit)
+        )
+        .filter(isHighSignalComment)
+        .map((c) => [(c.metadata as CommentDoc["metadata"]).subreddit, c])
+    ).values()
+  ).slice(0, desiredCount); // High signal FROM DIFFERENT SUBREDDITS comments desiredCount only (lower if not enough subreddits)
+
+  if (results.length < desiredCount) {
+    const used = new Set(results.map((p) => p.id));
+    const additionalComments = all
+      .filter(
+        (d): d is CommentDoc =>
+          d.type === "comment" && !used.has(d.id) && isHighSignalComment(d)
+      )
+      .sort((a, b) => b.metadata.score - a.metadata.score)
+      .slice(0, 8 - results.length); // Fill in with high signal comments from any subreddit
+
+    results.push(...additionalComments);
+  }
+
+  return results;
 }
 
 function isHighSignalComment(c: CommentDoc): boolean {
@@ -228,48 +261,31 @@ export async function selectDocs(all: Doc[]) {
 
   const profileDocs = all.find((d) => d.type === "profile");
 
-  const postDocs = getDiversePosts(
-    all.filter((d) => d.type === "post"),
+  const postDocs = selectPosts(
+    all.filter((d): d is PostDoc => d.type === "post" && !d.metadata.over_18),
     topSubNames,
-    5
-  ); // High signal FROM DIFFERENT SUBREDDITS if possible posts 5 only
+    8
+  ); // High signal FROM DIFFERENT SUBREDDITS
 
-  const commentDocs = Array.from(
-    new Map(
-      all
-        .filter(
-          (d): d is CommentDoc =>
-            d.type === "comment" && topSubNames.includes(d.metadata.subreddit)
-        )
-        .filter(isHighSignalComment)
-        .map((c) => [(c.metadata as CommentDoc["metadata"]).subreddit, c])
-    ).values()
-  ).slice(0, 8); // High signal FROM DIFFERENT SUBREDDITS comments 8 only (lower if not enough subreddits)
-
-  if (commentDocs.length < 8) {
-    const used = new Set(commentDocs.map((p) => p.id));
-    const additionalComments = all
-      .filter(
-        (d): d is CommentDoc =>
-          d.type === "comment" && !used.has(d.id) && isHighSignalComment(d)
-      )
-      .sort((a, b) => b.metadata.score - a.metadata.score)
-      .slice(0, 8 - commentDocs.length); // Fill in with high signal comments from any subreddit
-
-    commentDocs.push(...additionalComments);
-  }
+  const commentDocs = selectComments(
+    all.filter(
+      (d): d is CommentDoc => d.type === "comment" && !d.metadata.over_18
+    ),
+    topSubNames,
+    8
+  ); // High signal if possible
 
   const truncate = (d: Doc) => ({
     ...d,
     text: d.text.length > 400 ? d.text.slice(0, 400) + "..." : d.text,
   });
 
-  // console.log("Selected docs:", {
-  //   profileDocs,
-  //   postDocs: postDocs,
-  //   commentDocs: commentDocs,
-  //   subscriptionDocs: subscriptionDocs,
-  // });
+  console.log("Selected docs:", {
+    profileDocs,
+    postDocs: postDocs,
+    commentDocs: commentDocs,
+    subscriptionDocs: subscriptionDocs,
+  });
 
   return [
     profileDocs,
@@ -284,7 +300,7 @@ export async function summarizeRedditData(docs: Doc[]): Promise<string> {
     const text = docsToText(docs);
 
     const USER_PROMPT =
-      `Write ONE ${SUMMARY_SETTINGS.tokenLimit}-token bio that summarises ` +
+      `Write ONE ${LIMIT_SETTINGS.summaryTokenLimit}-token bio that summarises ` +
       `the user's activity and background.`;
 
     if (!OPENAI_ACTIVE) {
@@ -294,7 +310,7 @@ export async function summarizeRedditData(docs: Doc[]): Promise<string> {
 
     const completion = await openai.chat.completions.create({
       model: MODELS.SUMMARY,
-      max_completion_tokens: SUMMARY_SETTINGS.tokenLimit + 20,
+      max_completion_tokens: LIMIT_SETTINGS.summaryTokenLimit + 20,
       messages: [
         {
           role: "system",
@@ -351,6 +367,7 @@ export async function normalizeRedditData(
       awarder_karma: user.awarder_karma,
       public_description: user.subreddit.public_description,
       subreddit_subscribers: user.subreddit.subscribers,
+      over_18: user.over_18,
     },
   };
 
@@ -387,6 +404,7 @@ export async function normalizeRedditData(
       is_submitter: c.is_submitter,
       stickied: c.stickied,
       award_count: c.all_awardings.length,
+      over_18: c.over_18,
     },
   }));
 

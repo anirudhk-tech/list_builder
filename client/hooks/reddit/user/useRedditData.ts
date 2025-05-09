@@ -1,8 +1,12 @@
 import { getDiffHours } from "@/lib/utils";
+import { setRedditUser } from "@/store/slices/userSlice";
 import { ProcessedRedditResponse } from "@/types/reddit";
 import { UserUpsert } from "@/types/supabase";
+import { useDispatch } from "react-redux";
 
 export const useRedditData = () => {
+  const dispatch = useDispatch();
+
   const handleFetchRedditData = async () => {
     console.log("Checking if user data exists in Supabase...");
     const userCheckResponse = await fetch("/api/supabase/user/fetch", {
@@ -29,6 +33,13 @@ export const useRedditData = () => {
         console.log("User data is older than 7 days. Fetching new data...");
       } else {
         console.log("User data is up to date. No need to fetch new data.");
+        const redditUser = {
+          redditUsername: userCheckData.reddit_username,
+          summary: userCheckData.summary,
+          avatarUrl: userCheckData.avatar_url,
+        };
+
+        dispatch(setRedditUser(redditUser));
         return;
       }
     }
@@ -53,6 +64,10 @@ export const useRedditData = () => {
 
     const upsertPayload: UserUpsert = {
       reddit_username: data.raw.user.name,
+      avatar_url:
+        data.raw.user.snoovatar_img === ""
+          ? data.raw.user.icon_img
+          : data.raw.user.snoovatar_img,
       raw_data: data.raw,
       summary: data.summary,
       embedding: data.embedding,
@@ -72,6 +87,17 @@ export const useRedditData = () => {
     }
 
     console.log("Reddit data successfully upserted to Supabase.");
+
+    const redditUser = {
+      redditUsername: data.raw.user.name,
+      summary: data.summary,
+      avatarUrl:
+        data.raw.user.snoovatar_img === ""
+          ? data.raw.user.icon_img
+          : data.raw.user.snoovatar_img,
+    };
+
+    dispatch(setRedditUser(redditUser));
   };
 
   return { handleFetchRedditData };
