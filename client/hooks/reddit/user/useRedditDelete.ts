@@ -1,4 +1,4 @@
-import { useRedditDisconnect } from "./user/useRedditDisconnect";
+import { useRedditDisconnect } from "./useRedditDisconnect";
 
 export const useRedditDelete = () => {
   const { handleRedditDisconnect } = useRedditDisconnect();
@@ -11,6 +11,7 @@ export const useRedditDelete = () => {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include",
     });
 
     if (response.status === 200) {

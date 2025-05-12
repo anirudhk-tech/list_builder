@@ -7,7 +7,7 @@ import type { UserUpsert } from "@/types/supabase";
 export async function POST(request: NextRequest) {
   const token = await getToken({
     req: request,
-    secret: process.env.NEXTAUTH_SECRET!,
+    secureCookie: true,
   });
 
   if (!token?.sub) {

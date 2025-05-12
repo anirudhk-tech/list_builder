@@ -23,6 +23,7 @@ export const useRedditMatch = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include",
         body: JSON.stringify({
           query,
           topK: 5,

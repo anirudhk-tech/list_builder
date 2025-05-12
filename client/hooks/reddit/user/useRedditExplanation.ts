@@ -21,6 +21,7 @@ export const useRedditExplanation = () => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify({
             userSummary: summary,
             matchSummary,

@@ -7,7 +7,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
-import { useRedditDelete } from "@/hooks/reddit/useRedditDelete";
+import { useRedditDelete } from "@/hooks/reddit/user/useRedditDelete";
 import { setDeleteDataDialogState } from "@/store/slices/dialogSlice";
 import { MainState } from "@/store/store";
 import { AlertDialogDescription } from "@radix-ui/react-alert-dialog";
