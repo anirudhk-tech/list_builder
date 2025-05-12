@@ -1,8 +1,9 @@
 import { combineSlices, configureStore } from "@reduxjs/toolkit";
 import { userSlice } from "./slices/userSlice";
 import { matchSlice } from "./slices/matchSlice";
+import { dialogSlice } from "./slices/dialogSlice";
 
-const rootReducer = combineSlices(userSlice, matchSlice);
+const rootReducer = combineSlices(userSlice, matchSlice, dialogSlice);
 
 export type MainState = ReturnType<typeof rootReducer>;
 

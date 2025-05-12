@@ -27,7 +27,7 @@ export default function MatchPage() {
   useRedditExplanation();
 
   return (
-    <main className="flex flex-col h-screen max-h-screen w-full bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden font-sans">
+    <main className="flex flex-col w-full max-h-[150vh] min-h-[100vh] bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white overflow-hidden font-sans">
       <Navbar />
 
       {/* MAIN GRID — header+footer subtract ~8rem (adjust if your navbar/footer differ) */}
@@ -37,7 +37,7 @@ export default function MatchPage() {
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="md:col-span-2 flex flex-col h-full min-h-0 overflow-hidden"
+          className="md:col-span-2 flex flex-col h-[90%] min-h-0 overflow-hidden"
         >
           <h2 className="text-xl font-semibold mb-4">Your Matches</h2>
           <ScrollArea className="flex-1 pr-5 overflow-auto">
@@ -90,10 +90,10 @@ export default function MatchPage() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="md:col-span-4 flex flex-col min-h-0 overflow-hidden"
+          className="md:col-span-4 flex flex-col h-[100%] min-h-0 overflow-hidden"
         >
           {selectedMatch ? (
-            <Card className="flex flex-col flex-1 min-h-0 bg-gray-900/60 backdrop-blur-lg border-gray-800 rounded-3xl shadow-2xl">
+            <Card className="flex flex-col flex-1 h-full bg-gray-900/60 backdrop-blur-lg border-gray-800 rounded-3xl shadow-2xl">
               {/* ───────── Header ───────── */}
               <CardHeader className="border-b border-gray-800 flex items-center justify-between gap-4">
                 <CardTitle className="flex items-center gap-3 text-lg">

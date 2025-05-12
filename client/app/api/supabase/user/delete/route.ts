@@ -2,7 +2,6 @@ import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { supabase } from "@/config";
-import type { UserUpsert } from "@/types/supabase";
 
 export async function POST(request: NextRequest) {
   const token = await getToken({
@@ -14,14 +13,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Not authorized" }, { status: 401 });
   }
 
-  const body: UserUpsert = await request.json();
-
   const { error } = await supabase
     .from("profiles")
-    .upsert(body, { onConflict: "reddit_username" });
+    .delete()
+    .eq("reddit_username", token.name);
 
   if (error) {
-    console.error("Supabase upsert error:", error);
+    console.error("Supabase delete error:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 

@@ -39,3 +39,15 @@
 - **What I built:** Finished Gemini explanation pipleline. Committing now before India trip.
 - **Why it matters:** With explanations and matching complete. Testing is done, prompt tweaking, and matching tweaking is left before launch.
 - **Next:** Fine tune LLM algorithms and math.
+
+### 2025-05-11 | 12:57 PM 🧭 Daily Log (SWITCHED TO INDIAN TIMEZONE)
+
+- **What I built:** Finished Privacy Policy, TOS, and data deletion. Completing upon getting on the network. Fine tuning done. Loading states added.
+- **Why it matters:** With these final features ready to get nailed, testing phase is about to start.
+- **Next:** Nail down footer (maybe change UI), and then run a last time test with token count checking before deploying with favicon. Change it up with fire maybe.
+
+### 2025-05-12 | 9:30 AM 🧭 Daily Log
+
+- **What I built:** Production ready. First test in Prod.
+- **Why it matters:** With production ready, we can start promoting.
+- **Next:** Nail down production and ensure everything is function, fixing if needed.

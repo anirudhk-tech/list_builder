@@ -22,6 +22,7 @@ export const useRedditConnect = () => {
   }, [session, dispatch, status, handleFetchRedditData]);
 
   const handleRedditConnect = async () => {
+    localStorage.setItem("redditConnectLoading", "true"); // Because redirected, state does not work
     console.log("Connecting to Reddit...");
 
     await signIn("reddit", { callbackUrl: "/" });
