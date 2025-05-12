@@ -31,7 +31,7 @@ export const AboutSection: React.FC = () => {
   return (
     <section
       id="about"
-      className="relative z-10 container mx-auto px-6 pb-24 grid gap-12 lg:grid-cols-2"
+      className="relative z-10 container mx-auto px-6 pb-24 grid gap-12 lg:grid-cols-2 mt-20"
     >
       {/* Left: headline & copy */}
       <motion.div

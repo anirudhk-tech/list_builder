@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
           <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
             Your <span className="text-red-500">Next Connection</span> Awaits
           </h1>
-          <div className="h-90">
+          <div className="h-40 sm:h-60 lg:h-90">
             <TypeText
               textsToType={[
                 "I need a roommate for fall semester",
