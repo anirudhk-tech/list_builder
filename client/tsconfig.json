@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "types/next-auth.d.ts",
-    "tests/seedProfiles.ts"
+    "tests/seedProfiles.ts",
+    "app/api/auth/[...nextauth]"
   ],
   "exclude": ["node_modules"]
 }
